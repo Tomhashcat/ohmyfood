@@ -1,0 +1,364 @@
+body {
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+a{
+   text-decoration: none;
+   color: black;
+}
+h1 {
+    font-family: 'Shrikhand', cursive;
+
+}
+
+h3 {
+
+    font-family: Roboto, sans-serif;
+
+    text-align: center;
+    margin: 10px auto;
+    font-size: 24px;
+    width: 80%;
+}
+
+.h3-Fonctionnement {
+    margin-left: 15px;
+   text-align: left;
+}
+
+.h3-Restaurant {
+    text-align: left;
+    margin-left: 15px;
+    font-size: 24px;
+}
+
+p {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 10px auto;
+    width: 80%;
+    margin-top: 5px;
+    font-family: Roboto, sans-serif;
+}
+.fa-icone {
+    position: relative;
+    margin: 0;
+    margin-right: 30px;
+    color: #9356DC;
+    width: 13px;
+    height:25px
+}
+.fa-mobile-screen{
+    margin-right: 15px;
+}
+.fa-footer{
+    color: white;
+    position: inherit;
+    margin-left: 0;
+    margin-right: 5px;
+}
+input {
+    border: 0;
+    text-align: center;
+
+
+}
+
+input {
+    background-color: #EAEAEA;
+    width: 100%;
+    height: 50px;
+
+
+}
+
+i {
+    color: black;
+position: absolute;
+margin-left: 30%;
+margin-top: 17px;
+    width: 20px;
+    height: 20px;
+    
+
+}
+
+.card {
+    width: 340px;
+    height: 251px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+   
+}
+.card-body{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-family: Roboto, sans-serif;
+    margin-top: 15px;
+    
+}
+.card-title{
+    margin-top: 5px;
+    margin-bottom: 0;
+    margin-left: 12px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.card-text{
+    margin-left: 12px;
+}
+
+.img-Card {
+    width: 340px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+
+.recherche {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+
+}
+
+button {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 17px;
+    margin: 10px auto;
+    width: 218px;
+    height: 50px;
+    border: 0;
+    border-radius: 25px;
+}
+
+.button-explorer {
+    margin-top: 40px;
+    color: White;
+    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+
+}
+
+.reservation {
+    padding-top: 40px;
+    padding-bottom: 8%;
+    background-color: #F6F6F6;
+}
+
+.button-fonctionnement {
+    width: 323px;
+    height: 73px;
+    border-radius: 20px;
+    background-color: #F7F7F7;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.Fonctionnement {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+
+}
+
+.cercle {
+    display: flex;
+    justify-content: space-around;
+
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 25px;
+    background-color: #9356DC;
+    position: absolute;
+    margin-right: 315px;
+
+
+
+}
+
+span {
+    margin-top: 4px;
+}
+
+.restaurant {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #F6F6F6;
+    margin-top: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+   
+}
+footer{
+    background-color:#353535;
+    color: #ffffff;
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    
+    
+}
+.h1-footer{
+    font-size: 18px;
+    margin-left: 30px;
+}
+li{
+    font-family: Roboto ,sans-serif;
+    list-style-type: none;
+  
+}
+ul{
+    padding-left: 0px;
+    margin-left: 30px;
+    line-height: 25px;
+}
+
+/*MEDIAQUERIES*/
+
+/*MIN WIDTH 1024px*/
+
+@media(min-width:768px) {
+    h3 {
+        font-size: 50px;
+        margin-top: 50px;
+    }
+    .h3-Restaurant{
+        margin-left: 155px;
+    }
+    i {
+        
+    margin-left: 45%;
+    
+        
+    
+    }
+    .h3-Fonctionnement {
+        margin-top: 80px;
+        margin-left: 20px;
+        margin-right: 0;
+        width: 0;
+        font-size: 24px;
+        text-align: left;
+    }
+    .card {
+        width: 490px;
+        height: 251px;
+        border-radius: 15px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        margin-top: 15px;
+       
+    }
+    .card-body{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        font-family: Roboto, sans-serif;
+        margin-top: 15px;
+        
+    }
+    .card-title{
+        margin-top: 5px;
+        margin-bottom: 0;
+        margin-left: 12px;
+        font-size: 18px;
+    }
+   
+    
+    .img-Card {
+        width: 490px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+.card-text{
+    text-align: left;
+}
+
+    p {
+        display: block;
+        text-align: center;
+        font-size: 17px;
+        margin-top: 10px;
+       
+
+    }
+
+    button {
+        margin-top: 50px;
+    }
+
+    .reservation {
+        padding-top: 1%;
+        padding-bottom: 2%;
+    }
+
+    .Fonctionnement {
+
+        width: 90%;
+
+
+        display: inline-block;
+        margin-left: 120px;
+        justify-content: center;
+
+    }
+
+    .Fonctionnement-Items {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+
+
+
+    }
+
+    .button-fonctionnement {
+        margin-right: 5%;
+        margin-left: 10px;
+
+
+    }
+
+    .cercle {
+        margin-right: 325px;
+
+    }
+    .restaurant-cards{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+    }
+    footer{
+        flex-direction: row-reverse;
+    }
+   ul{
+    display: flex;
+        flex-direction: row;
+       
+    }
+    .fa-footer{
+        margin-top: 0;
+        margin-right: 2px;
+    }
+   
+  
+
+}
