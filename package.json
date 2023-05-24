@@ -6,7 +6,7 @@
   "scripts": {
    
     
-    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+    "sass": "sass --watch ./Sass/main.scss:./public/css/style.css"
   },
   "author": "",
   "license": "ISC",
