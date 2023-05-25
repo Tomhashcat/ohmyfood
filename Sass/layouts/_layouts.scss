@@ -1,10 +1,37 @@
+$h1-font-family:"Shrikhand", sans-serif;
+
 header {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    background-color: aqua;
-font-family: $H1-font-family;
+    font-family: $h1-font-family;
+    input {
+        background-color: #EAEAEA;
+        width: 100%;
+        height: 50px;
+        border: 0;
+        text-align: center;
+     }
+     .recherche {
+
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        i {
+            color: black;
+            position: absolute;
+            margin-left: 30%;
+            margin-top: 17px;
+            width: 20px;
+            height: 20px;
+        
+        
+        }
+    
+    
+    }
+    
    
+
 }
-
-

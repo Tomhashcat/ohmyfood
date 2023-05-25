@@ -1,0 +1,15 @@
+.reservation {
+    @include title-box-display;
+    h3{
+        @include h3-display;
+    }
+    p{
+        @include p-display;
+    }
+    button{
+        @include button-base;
+        @include button-purple
+    }
+}
+
+

@@ -1,5 +1,29 @@
 /*FONTS*/
-$h1-font-family: 'Shrikhand', cursive;
+
+@mixin p-display{ display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 10px auto;
+    width: 80%;
+    margin-top: 5px;
+    font-family: Roboto, sans-serif;
+}
+@mixin title-box-display{
+    padding-top: 40px;
+    padding-bottom: 8%;
+    background-color: #F6F6F6;
+}
+@mixin h3-display{
+    
+
+        font-family: Roboto, sans-serif;
+    
+        text-align: center;
+        margin: 10px auto;
+        font-size: 24px;
+        width: 80%;
+    
+}
 
 
 
