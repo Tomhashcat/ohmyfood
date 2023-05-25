@@ -35,3 +35,41 @@ header {
    
 
 }
+footer{
+    
+        h1{font-family: $h1-font-family;}
+        background-color: #353535;
+        color: #ffffff;
+        padding-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        .h1-footer {
+            font-size: 18px;
+            margin-left: 30px;
+        }
+        li {
+            font-family: Roboto, sans-serif;
+            list-style-type: none;
+        
+        }
+        ul {
+            padding-left: 0px;
+            margin-left: 30px;
+            line-height: 25px;
+        }
+        .contact {
+            color: White;
+        }
+        .fa-footer {
+            color: white;
+            position: inherit;
+            margin-left: 0;
+            margin-right: 5px;
+        }
+        
+}
+
+
+
+

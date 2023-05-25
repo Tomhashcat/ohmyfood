@@ -1,15 +1,75 @@
 .reservation {
     @include title-box-display;
-    h3{
+
+    h3 {
         @include h3-display;
     }
-    p{
+
+    p {
         @include p-display;
     }
-    button{
+
+    button {
         @include button-base;
         @include button-purple
     }
 }
 
+.Fonctionnement {
+    @include container-section;
+    @include items-fonctionnement;
 
+    h3 {
+        @include h3-section
+    }
+
+    button {
+        @include button-fonctionnement;
+
+        .cercle {
+            @include circle;
+
+        }
+
+        span {
+            margin-top: 6px;
+        }
+
+        .fa-icone {
+            @include icone-button-fonctionnement
+        }
+
+        .fa-mobile-screen {
+            margin-right: 15px;
+        }
+    }
+
+}
+
+.restaurant {
+    @include container-restaurant;
+
+    h3 {
+        @include h3-section;
+    }
+
+    .card {
+        @include card-restaurant;
+
+        a {
+            @include a-none;
+        }
+
+        img {
+            @include img-card;
+        }
+        .card-title{@include card-title}
+        .card-body{
+            @include card-body;
+        }
+        p{
+            @include card-p;
+        }
+
+    }
+}

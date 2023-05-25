@@ -1,99 +1,25 @@
-a {
-    text-decoration: none;
-    color: black;
-}
-
-h1 {
-    font-family: 'Shrikhand', cursive;
-
-}
-
-
-
-.h3-Fonctionnement {
-    margin-left: 15px;
-    text-align: left;
-}
-
-.h3-Restaurant {
-    text-align: left;
-    margin-left: 15px;
-    font-size: 24px;
-}
-
-p {
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    margin: 10px auto;
-    width: 80%;
-    margin-top: 5px;
-    font-family: Roboto, sans-serif;
-}
-
-.fa-icone {
-    position: relative;
-    margin: 0;
-    margin-right: 30px;
-    color: #9356DC;
-    width: 13px;
-    height: 25px
-}
-
-.fa-mobile-screen {
-    margin-right: 15px;
-}
-
-.fa-footer {
-    color: white;
-    position: inherit;
-    margin-left: 0;
-    margin-right: 5px;
-}
-
-.contact {
-    color: White;
-}
 
 
 
 
-.card {
-    width: 340px;
-    height: 251px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-    margin-top: 15px;
 
-}
 
-.card-body {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    font-family: Roboto, sans-serif;
-    margin-top: 15px;
 
-}
 
-.card-title {
-    margin-top: 5px;
-    margin-bottom: 0;
-    margin-left: 12px;
-    font-size: 18px;
-    font-weight: bold;
-}
 
-.card-text {
-    margin-left: 12px;
-}
 
-.img-Card {
-    width: 340px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 15px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -109,80 +35,18 @@ p {
 
 
 
-.button-fonctionnement {
-    width: 323px;
-    height: 73px;
-    border-radius: 20px;
-    background-color: #F7F7F7;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-}
-
-.Fonctionnement {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 40px;
-
-}
-
-.cercle {
-    display: flex;
-    justify-content: space-around;
-
-    color: white;
-    width: 30px;
-    height: 30px;
-    border-radius: 25px;
-    background-color: #9356DC;
-    position: absolute;
-    margin-right: 315px;
 
 
 
-}
-
-span {
-    margin-top: 4px;
-}
-
-.restaurant {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: #F6F6F6;
-    margin-top: 40px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-
-}
-
-footer {
-    background-color: #353535;
-    color: #ffffff;
-    padding-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
 
 
-}
 
-.h1-footer {
-    font-size: 18px;
-    margin-left: 30px;
-}
 
-li {
-    font-family: Roboto, sans-serif;
-    list-style-type: none;
 
-}
 
-ul {
-    padding-left: 0px;
-    margin-left: 30px;
-    line-height: 25px;
-}
+
+
+
 
 /*MEDIAQUERIES*/
 
@@ -261,9 +125,7 @@ ul {
 
     }
 
-    button {
-        margin-top: 50px;
-    }
+    
 
     .reservation {
         padding-top: 1%;
