@@ -39,8 +39,7 @@
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
     margin-top: 30px;
     @media(min-width:768px) {
-        margin-right: 5%;
-        margin-left: 10px;
+       
     }
 }
 
@@ -48,14 +47,17 @@
 
     display: flex;
     justify-content: space-around;
-  
+    
     color: white;
     width: 30px;
     height: 30px;
     border-radius: 25px;
     background-color: #9356DC;
     position: absolute;
-   
+    @media(min-width:768px) {
+                
+        margin-right: 500px;
+    }
 
 }
 @mixin icone-button-fonctionnement{
@@ -114,3 +116,51 @@ margin-left: 30px;
     padding-bottom: 20px;
 }
 @mixin card-text{ margin-left: 12px;}
+/*COEUR*/
+.heart-icon {
+    width: 22px;
+    height: 21px;
+    margin-top: 55px;
+    margin-left: 25px;
+    transform: translate(-50%, -50%);
+    
+     
+   
+  }
+  .heart-icon-item {
+    transform-origin: center;
+   fill: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+   border:1px solid black;
+    
+  }
+  .heart-icon #heart-full {
+    transform: scale(0);
+    
+  }
+  .heart-checkbox {
+    display: none;
+  }
+  .heart-checkbox:checked + label #heart-full {
+    transform: scale(1);
+    animation-duration: 0.3s;
+    animation-name: grow;
+   
+    
+  }
+  @keyframes grow {
+    0% {
+      transform: scale(0);
+      
+    }
+    80% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+      
+    }
+    
+       
+
+    
+  }

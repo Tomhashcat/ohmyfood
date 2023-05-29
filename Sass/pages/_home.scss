@@ -66,11 +66,9 @@
 
         .cercle {
             @include circle;
-            margin-right: 325px;
+            
 
-            @media(min-width:768px) {
-                margin-right: 330px;
-            }
+           
         }
 
         span {

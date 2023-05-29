@@ -42,7 +42,10 @@ header {
 
 
 }
-
+.titre-Coeur{
+    display: flex;
+    justify-content: center;
+}
 footer {
     background-color: #353535;
     color: #ffffff;
@@ -50,8 +53,9 @@ footer {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    
     @media(min-witdh:768px){
-            
+         display: flex;   
         flex-direction: row-reverse;
     } 
   
@@ -62,7 +66,9 @@ footer {
         font-family: $h1-font-family;
         font-size: 18px;
         margin-left: 45px;
-
+width: 200px;
+position: absolute;
+align-self: flex-end;
     }
 
     li {
@@ -79,6 +85,8 @@ footer {
         @media(min-width:768px) {
             display: flex;
             flex-direction: row;
+            align-self: flex-end;
+            margin-right: 250px;
         }
     }
 

@@ -31,6 +31,11 @@ header .recherche i {
   }
 }
 
+.titre-Coeur {
+  display: flex;
+  justify-content: center;
+}
+
 footer {
   background-color: #353535;
   color: #ffffff;
@@ -41,6 +46,7 @@ footer {
 }
 @media (min-witdh: 768px) {
   footer {
+    display: flex;
     flex-direction: row-reverse;
   }
 }
@@ -48,6 +54,9 @@ footer .h1-footer {
   font-family: "Shrikhand", sans-serif;
   font-size: 18px;
   margin-left: 45px;
+  width: 200px;
+  position: absolute;
+  align-self: flex-end;
 }
 footer li {
   font-family: Roboto, sans-serif;
@@ -63,6 +72,8 @@ footer ul {
   footer ul {
     display: flex;
     flex-direction: row;
+    align-self: flex-end;
+    margin-right: 250px;
   }
 }
 footer .contact {
@@ -86,6 +97,46 @@ footer a {
 }
 
 /*FONTS*/
+/*COEUR*/
+.heart-icon {
+  width: 22px;
+  height: 21px;
+  margin-top: 55px;
+  margin-left: 25px;
+  transform: translate(-50%, -50%);
+}
+
+.heart-icon-item {
+  transform-origin: center;
+  fill: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  border: 1px solid black;
+}
+
+.heart-icon #heart-full {
+  transform: scale(0);
+}
+
+.heart-checkbox {
+  display: none;
+}
+
+.heart-checkbox:checked + label #heart-full {
+  transform: scale(1);
+  animation-duration: 0.3s;
+  animation-name: grow;
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
@@ -183,12 +234,6 @@ body {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   margin-top: 30px;
 }
-@media (min-width: 768px) {
-  .Fonctionnement button {
-    margin-right: 5%;
-    margin-left: 10px;
-  }
-}
 .Fonctionnement button .cercle {
   display: flex;
   justify-content: space-around;
@@ -198,11 +243,10 @@ body {
   border-radius: 25px;
   background-color: #9356DC;
   position: absolute;
-  margin-right: 325px;
 }
 @media (min-width: 768px) {
   .Fonctionnement button .cercle {
-    margin-right: 330px;
+    margin-right: 500px;
   }
 }
 .Fonctionnement button span {
@@ -332,19 +376,17 @@ a {
 h1 {
   font-family: "Shrikhand", cursive;
 }
-
-h3 {
-  font-family: Roboto, sans-serif;
-  text-align: left;
-  margin-top: 15px;
-  margin-bottom: 0;
-  margin-left: 15px;
-  font-size: 16px;
+@media (min-width: 768px) {
+  h1 {
+    text-align: center;
+  }
 }
 
 img {
   width: 100%;
   height: 275px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .section {
@@ -354,18 +396,43 @@ img {
   border-radius: 25px;
   padding-bottom: 70px;
 }
-
-.titre {
+.section .titre-EPD {
+  font-weight: 300;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 190px;
+    width: 80%;
+  }
+}
+.section .titre {
   padding-top: 20px;
   padding-left: 15px;
 }
-
-.cards {
+.section h3 {
+  font-family: Roboto, sans-serif;
+  text-align: left;
+  margin-top: 15px;
+  margin-bottom: 0;
+  margin-left: 15px;
+  font-size: 16px;
+}
+.section .cards {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-.cards .card {
+@media (min-width: 768px) {
+  .section .cards {
+    flex-direction: column;
+  }
+}
+.section .cards .card {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -377,30 +444,31 @@ img {
   border-radius: 15px;
   cursor: pointer;
 }
-.cards .card-text {
+@media (min-width: 768px) {
+  .section .cards .card {
+    width: 634px;
+  }
+}
+.section .cards .card-text {
   width: 200px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.cards .card-text p {
+.section .cards .card-text p {
   margin-left: 15px;
   margin-top: 0;
 }
-
-.prix {
+.section .prix {
   margin-right: 12px;
 }
-
-.Plats {
+.section .Plats {
   margin-top: 80px;
 }
-
-.Desserts {
+.section .Desserts {
   margin-top: 80px;
 }
-
-button {
+.section button {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -413,8 +481,7 @@ button {
   border-radius: 25px;
   cursor: pointer;
 }
-
-.button-explorer {
+.section .button-explorer {
   margin-top: 50px;
   display: flex;
   align-items: center;
@@ -430,30 +497,4 @@ button {
   color: White;
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-}
-
-footer {
-  background-color: #353535;
-  color: #ffffff;
-  padding-top: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-}
-
-.h1-footer {
-  font-size: 18px;
-  margin-left: 30px;
-}
-
-li {
-  font-family: Roboto, sans-serif;
-  list-style-type: none;
-  cursor: pointer;
-}
-
-ul {
-  padding-left: 0px;
-  margin-left: 30px;
-  line-height: 25px;
 }/*# sourceMappingURL=main.css.map */
