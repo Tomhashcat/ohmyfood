@@ -2,33 +2,75 @@
     @include title-box-display;
 
     h3 {
-        @include h3-display;
+        text-align: center;
+
+        @media(min-witdh:768px) {
+            font-size: 40px;
+        }
     }
 
     p {
         @include p-display;
+
+        @media(min-width:768px) {
+            display: block;
+            text-align: center;
+            font-size: 17px;
+            margin-top: 10px;
+        }
     }
 
-    button {
+    .button-explorer {
         @include button-base;
-        @include button-purple
+        @include button-purple;
+
+        &:hover {
+            background: linear-gradient(193.33deg, #a577dc -11.44%, #f4aadf 123.93%);
+            box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.25);
+        }
     }
+
 }
 
 .Fonctionnement {
     @include container-section;
     @include items-fonctionnement;
 
+    @media (min-width:768px) {
+        width: 62%;
+
+
+        display: inline-block;
+
+        justify-content: center;
+        margin-left: 380px;
+    }
+
     h3 {
-        @include h3-section
+        @include h3-section;
+
+        @media (min-width:768px) {
+            margin-top: 80px;
+            margin-left: 20px;
+            margin-right: 0;
+            width: 0;
+            font-size: 24px;
+            text-align: left;
+        }
     }
 
     button {
         @include button-fonctionnement;
 
+
+
         .cercle {
             @include circle;
+            margin-right: 325px;
 
+            @media(min-width:768px) {
+                margin-right: 330px;
+            }
         }
 
         span {
@@ -36,40 +78,95 @@
         }
 
         .fa-icone {
-            @include icone-button-fonctionnement
+            @include icone-button-fonctionnement;
         }
 
         .fa-mobile-screen {
             margin-right: 15px;
         }
+
+
+
     }
 
+    .Fonctionnement-Items {
+        @media(min-width:768px) {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-around;
+
+        }
+    }
 }
 
 .restaurant {
     @include container-restaurant;
 
+    @media (min-width:768px) {}
+
     h3 {
         @include h3-section;
+
+        @media (min-width:768px) {
+            width: 42%;
+            font-size: 24px;
+            margin-top: 50px;
+
+
+        }
     }
 
-    .card {
-        @include card-restaurant;
+}
 
-        a {
-            @include a-none;
-        }
+.restaurant-cards {
+    @media(min-width:768px) {
+        width: 70%;
+        display: flex;
+        flex-wrap: wrap;
 
-        img {
-            @include img-card;
-        }
-        .card-title{@include card-title}
-        .card-body{
-            @include card-body;
-        }
-        p{
-            @include card-p;
-        }
+        justify-content: space-evenly;
 
     }
+}
+
+.card {
+    @include card-restaurant;
+
+    @media(min-width:768px) {
+        width: 490px;
+        height: 251px;
+        border-radius: 15px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        margin-top: 15px;
+    }
+
+    a {
+        @include a-none;
+    }
+
+    img {
+        @include img-card;
+
+        @media(min-width:768px) {
+            width: 490px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 15px 15px 0px 0px;
+        }
+    }
+
+    .card-title {
+        @include card-title
+    }
+
+    .card-body {
+        @include card-body;
+    }
+
+    p {
+        @include card-p;
+    }
+
+    @media(min-width:768px) {}
 }
