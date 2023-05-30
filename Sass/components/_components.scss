@@ -1,166 +1,60 @@
-@mixin button-base {
-
-    margin-top: 50px;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-    font-size: 17px;
-    margin: 10px auto;
-    width: 218px;
-    height: 50px;
-    border: 0;
-    border-radius: 25px;
-
-}
-
-@mixin button-purple {
-    margin-top: 40px;
-    color: White;
-    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-}
-
-@mixin container-section {
-    display: flex;
-    flex-wrap: wrap;
-
-    margin-top: 40px;
-}
-
-@mixin button-fonctionnement {
-   
-   
-    width: 323px;
-    height: 73px;
-    border-radius: 20px;
-    background-color: #F7F7F7;
-    border:none;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-    margin-top: 30px;
-    @media(min-width:768px) {
-       
-    }
-}
-
-@mixin circle {
-
-    display: flex;
-    justify-content: space-around;
-    
-    color: white;
-    width: 30px;
-    height: 30px;
-    border-radius: 25px;
-    background-color: #9356DC;
-    position: absolute;
-    @media(min-width:768px) {
-                
-        margin-right: 500px;
-    }
-
-}
-@mixin icone-button-fonctionnement{
-    
-        position: relative;
-        margin: 0;
-        margin-right: 30px;
-        color: #9356DC;
-        width: 13px;
-        height: 25px;
-        
-    
-}
-@mixin container-section{
-    width: 90%;
-    
-
-margin-left: 30px;
-    display: inline-block;
-   text-align: center;
-    
-}
-@mixin items-fonctionnement{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-}
-@mixin card-restaurant{
-    width: 340px;
-    height: 251px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-    margin-top: 15px;
-    @media(min-witdh:768px){
-        width: 490px;
-        height: 251px;
-        border-radius: 15px;
-        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-        margin-top: 15px;
-    }
-    
-
-}
-@mixin img-card{ width: 340px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 15px 15px 0px 0px;}
-@mixin container-restaurant{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: #F6F6F6;
-    margin-top: 40px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-@mixin card-text{ margin-left: 12px;}
 /*COEUR*/
 .heart-icon {
-    width: 22px;
-    height: 21px;
-    margin-top: 55px;
-    margin-left: 25px;
-    transform: translate(-50%, -50%);
-    
-     
-   
+  position: absolute;
+  width: 22px;
+  height: 21px;
+  margin-top: 25px;
+  margin-left: 300px;
+  transform: translate(-50%, -50%);
+  @media (min-width:768px){
+    margin-left: 450px;
   }
-  .heart-icon-item {
-    transform-origin: center;
-   fill: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-   border:1px solid black;
-    
-  }
-  .heart-icon #heart-full {
-    transform: scale(0);
-    
-  }
-  .heart-checkbox {
-    display: none;
-  }
-  .heart-checkbox:checked + label #heart-full {
-    transform: scale(1);
-    animation-duration: 0.3s;
-    animation-name: grow;
-   
-    
-  }
-  @keyframes grow {
-    0% {
-      transform: scale(0);
-      
-    }
-    80% {
-      transform: scale(1.1);
-    }
-    100% {
-      transform: scale(1);
-      
-    }
-    
-       
 
-    
+
+
+}
+
+.heart-icon-item {
+  transform-origin: center;
+  fill:  #a577dc ;
+
+
+}
+
+.heart-icon #heart-full {
+  transform: scale(0);
+
+}
+
+.heart-checkbox {
+  display: none;
+}
+
+.heart-checkbox:checked+label #heart-full {
+  transform: scale(1);
+  animation-duration: 0.3s;
+  animation-name: grow;
+
+display: flex;
+
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(0);
+
   }
+
+  80% {
+    transform: scale(1.3);
+  }
+
+  100% {
+    transform: scale(1);
+
+  }
+
+
+
+
+}

@@ -1,6 +1,10 @@
-@import "./layouts/layouts";
 @import "./utils/variables";
-@import"./components/components";
+@import "./utils/mixins";
 @import"./base/base";
+@import"./components/components";
+@import "./layouts/header";
+@import "./layouts/footer";
 @import"./pages/home";
 @import"./pages/Restaurants";
+
+

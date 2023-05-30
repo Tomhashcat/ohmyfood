@@ -1,71 +1,19 @@
 /*FONTS*/
-
-@mixin p-display {
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    margin: 10px auto;
-    width: 80%;
-    margin-top: 5px;
-    font-family: Roboto, sans-serif;
-}
-
-@mixin title-box-display {
-    padding-top: 40px;
-    padding-bottom: 8%;
-    background-color: #F6F6F6;
-}
-
-@mixin h3-display {
+$h1-font-family: "Shrikhand", sans-serif;
+$linear-background: linear-gradient(193.33deg, #a577dc -11.44%, #f4aadf 123.93%);
 
 
 
 
-    text-align: center;
-    margin: 10px auto;
 
-    width: 80%;
-    
-}
 
-@mixin h3-font {
-    font-size: 24px;
-    font-family: Roboto, sans-serif;
-   
 
-}
 
-@mixin h3-section {
-    margin-right: 300px
-}
 
-@mixin a-none {
-    text-decoration: none;
-    color: black;
-}
 
-@mixin card-title {
-    margin-top: 5px;
-    margin-bottom: 0;
-    margin-left: 12px;
-    font-size: 18px;
-    font-weight: bold;
-}
 
-@mixin card-body {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
 
-    margin-top: 15px;
-}
 
-@mixin card-p {
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    margin: 10px;
-    width: 80%;
-    margin-top: 5px;
-    font-family: Roboto, sans-serif;
-}
+
+
+
