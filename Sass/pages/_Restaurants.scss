@@ -1,8 +1,7 @@
-
 a {
     text-decoration: none;
     color: black;
-   
+
 }
 
 h1 {
@@ -28,7 +27,7 @@ img {
 }
 
 .section {
-    
+
     .titre-EPD {
         font-weight: 300;
         margin-left: 20px;
@@ -59,13 +58,15 @@ img {
         flex-wrap: wrap;
 
 
+        animation: magic 3s ease-in-out;
+        animation-delay: 3s;
 
         @media(min-width:768px) {
             flex-direction: column;
         }
 
         .card {
-            
+
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
@@ -83,11 +84,13 @@ img {
             color: black;
             font-family: sans-serif;
             transform: scale(1);
+
             &:hover {
                 transform: scale(1.02);
-               
+
                 box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.25);
             }
+
             .ball {
                 display: none;
 
@@ -98,7 +101,7 @@ img {
                 background-color: #99E2D0;
                 position: absolute;
                 border-radius: 0px 25px 25px 0px;
-                margin-left: 300px;
+                margin-left: 285px;
                 z-index: -1;
 
             }
@@ -109,7 +112,7 @@ img {
 
                     box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.25);
 
-                   
+
 
                     .fa-check {
                         display: flex;
@@ -156,7 +159,7 @@ img {
 
             &:focus {
 
-                
+
 
                 .fa-check {
                     display: flex;
@@ -187,7 +190,7 @@ img {
                 .prix {
                     display: flex;
                     position: absolute;
-                   
+
                     height: 69px;
                     margin-left: 250px;
                     margin-top: 0;
@@ -203,22 +206,24 @@ img {
 
 
             }
+
             @keyframes checked {
-                0%{
-                   right:-5%;
+                0% {
+                    right: -5%;
                 }
-                
-                100%{
-                    right:0%
+
+                100% {
+                    right: 0%
                 }
             }
+
             @keyframes checked2 {
-                0%{
-                   left:1.5%;
+                0% {
+                    left: 1.5%;
                 }
-                
-                100%{
-                    left:2%
+
+                100% {
+                    left: 2%
                 }
             }
 
@@ -298,6 +303,25 @@ img {
         @include button-base;
         @include button-purple;
 
+    }
+
+    @keyframes magic {
+        0% {
+            visibility: visible;
+            transform: scale(0);
+            rotate: (180deg);
+        }
+
+        50% {
+            visibility: visible;
+            transform: scale(0.5);
+        }
+
+        100% {
+            visibility: visible;
+            transform: scale(1);
+            display: block;
+        }
     }
 
 }

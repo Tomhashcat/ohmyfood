@@ -57,7 +57,7 @@ body {
 .loader {
   position: absolute;
   width: 100%;
-  height: 120%;
+  height: 125%;
   background: #99E2D0;
   display: flex;
   padding-top: 120px;
@@ -65,7 +65,7 @@ body {
   align-items: center;
   flex-direction: column;
   z-index: 1;
-  animation: invisible 3s ease-in-out;
+  animation: invisible 6s ease-in-out;
   visibility: hidden;
   overflow: hidden;
 }
@@ -78,6 +78,10 @@ body {
 @keyframes invisible {
   0% {
     display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+  50% {
     opacity: 1;
     visibility: visible;
   }
@@ -538,6 +542,8 @@ img {
 .section .cards {
   display: flex;
   flex-wrap: wrap;
+  animation: magic 3s ease-in-out;
+  animation-delay: 3s;
 }
 @media (min-width: 768px) {
   .section .cards {
@@ -573,7 +579,7 @@ img {
   background-color: #99E2D0;
   position: absolute;
   border-radius: 0px 25px 25px 0px;
-  margin-left: 300px;
+  margin-left: 285px;
   z-index: -1;
 }
 @media (min-width: 768px) {
@@ -731,4 +737,20 @@ img {
   color: White;
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+@keyframes magic {
+  0% {
+    visibility: visible;
+    transform: scale(0);
+    rotate: 180deg;
+  }
+  50% {
+    visibility: visible;
+    transform: scale(0.5);
+  }
+  100% {
+    visibility: visible;
+    transform: scale(1);
+    display: block;
+  }
 }/*# sourceMappingURL=main.css.map */
