@@ -83,7 +83,7 @@ img {
 
             .ball {
                 display: none;
-                
+
 
                 white-space: nowrap;
                 width: 70px;
@@ -94,6 +94,58 @@ img {
                 margin-left: 300px;
                 z-index: -1;
 
+            }
+
+            @media (min-width:768px) {
+                &:hover {
+                    transform: scale(1.05);
+
+                    box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.25);
+
+                    .prix {
+                        display: flex;
+                        position: absolute;
+                    }
+
+                    .fa-check {
+                        display: flex;
+                        color: white;
+                        margin-top: 20px;
+                        margin-left: 10px;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 25px;
+                        background-color: white;
+                        color: #99E2D0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+
+                    }
+
+                    .ball {
+                        transform: left;
+                        display: block;
+                        transition: left;
+
+                        transition: 5s;
+                        z-index: 1;
+                    }
+
+                    .prix {
+                        height: 69px;
+                        margin-left: 270px;
+                        margin-top: 0;
+                        position: absolute;
+                        text-align: center;
+                        align-items: center;
+                        padding-right: 5px;
+
+                    }
+
+
+                }
             }
 
             &:focus {
@@ -124,15 +176,16 @@ img {
 
                     display: block;
                     transition: left;
-
+                    z-index: 1;
                     transition: 5s;
-                   
+
                 }
 
                 .prix {
                     height: 69px;
                     margin-left: 270px;
                     margin-top: 0;
+                    padding-right: 5px;
                     position: absolute;
                     text-align: center;
                     align-items: center;
@@ -169,11 +222,14 @@ img {
             }
 
             .prix {
-                margin-top: 35px;
-                margin-left: 320px;
+                margin-top: 25px;
+                margin-left: 315px;
                 background-color: #F6F6F6;
+                border-radius: 25px;
 
-
+                @media (min-width:768px) {
+                    margin-left: 330px;
+                }
 
             }
 

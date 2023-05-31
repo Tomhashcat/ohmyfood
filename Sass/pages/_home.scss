@@ -245,6 +245,12 @@
                 margin-top: 5px;
                 font-family: Roboto, sans-serif;
             }
+            .heart-icon{
+                margin-left: 300px;
+                @media (min-width:768px) {
+                    margin-left: 450px;
+                }
+            }
         }
 
 

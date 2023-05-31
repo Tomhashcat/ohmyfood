@@ -19,7 +19,7 @@ body {
 }
 @media (min-width: 768px) {
   .heart-icon {
-    margin-left: 450px;
+    margin-left: 550px;
   }
 }
 
@@ -54,6 +54,66 @@ body {
     transform: scale(1);
   }
 }
+.loader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #99E2D0;
+  display: flex;
+  padding-top: 120px;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+}
+.loader i {
+  animation: spin 2s linear infinite;
+  animation-direction: alternate, reverse, normal;
+  color: white;
+}
+
+@keyframes spin {
+  0% {
+    transform: scale(2);
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: scale(1);
+    transform: rotate(360deg);
+  }
+}
+/*.fondu-out {
+    opacity: 0;
+    transition: opacity 5s ease-out;
+}*/
+.box1 {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  width: 1500px;
+  justify-content: space-around;
+  position: absolute;
+}
+
+.box2 {
+  display: flex;
+  margin-top: 200px;
+  flex-direction: row;
+  position: absolute;
+  width: 1500px;
+  justify-content: space-around;
+  height: 400px;
+}
+
+.box3 {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  justify-content: space-around;
+  width: 1000px;
+  height: 400px;
+}
+
 header {
   display: flex;
   justify-content: center;
@@ -412,6 +472,14 @@ footer a {
   margin-top: 5px;
   font-family: Roboto, sans-serif;
 }
+.restaurant .card .card-body .heart-icon {
+  margin-left: 300px;
+}
+@media (min-width: 768px) {
+  .restaurant .card .card-body .heart-icon {
+    margin-left: 450px;
+  }
+}
 
 a {
   text-decoration: none;
@@ -497,6 +565,47 @@ img {
   margin-left: 300px;
   z-index: -1;
 }
+@media (min-width: 768px) {
+  .section .cards .card:hover {
+    transform: scale(1.05);
+    box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.25);
+  }
+  .section .cards .card:hover .prix {
+    display: flex;
+    position: absolute;
+  }
+  .section .cards .card:hover .fa-check {
+    display: flex;
+    color: white;
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 25px;
+    background-color: white;
+    color: #99E2D0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .section .cards .card:hover .ball {
+    transform: left;
+    display: block;
+    transition: left;
+    transition: 5s;
+    z-index: 1;
+  }
+  .section .cards .card:hover .prix {
+    height: 69px;
+    margin-left: 270px;
+    margin-top: 0;
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    padding-right: 5px;
+  }
+}
 .section .cards .card:focus .prix {
   display: flex;
   position: absolute;
@@ -519,12 +628,14 @@ img {
 .section .cards .card:focus .ball {
   display: block;
   transition: left;
+  z-index: 1;
   transition: 5s;
 }
 .section .cards .card:focus .prix {
   height: 69px;
   margin-left: 270px;
   margin-top: 0;
+  padding-right: 5px;
   position: absolute;
   text-align: center;
   align-items: center;
@@ -547,9 +658,15 @@ img {
   width: 500px;
 }
 .section .cards .card .prix {
-  margin-top: 35px;
-  margin-left: 320px;
+  margin-top: 25px;
+  margin-left: 315px;
   background-color: #F6F6F6;
+  border-radius: 25px;
+}
+@media (min-width: 768px) {
+  .section .cards .card .prix {
+    margin-left: 330px;
+  }
 }
 .section .cards .card p {
   margin-top: 5px;

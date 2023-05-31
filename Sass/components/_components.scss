@@ -6,8 +6,10 @@
   margin-top: 25px;
   margin-left: 300px;
   transform: translate(-50%, -50%);
-  @media (min-width:768px){
-    margin-left: 450px;
+
+  @media (min-width:768px) {
+    margin-left:
+      550px;
   }
 
 
@@ -16,7 +18,7 @@
 
 .heart-icon-item {
   transform-origin: center;
-  fill:  #a577dc ;
+  fill: #a577dc;
 
 
 }
@@ -35,7 +37,7 @@
   animation-duration: 0.3s;
   animation-name: grow;
 
-display: flex;
+  display: flex;
 
 }
 
