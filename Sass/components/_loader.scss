@@ -9,12 +9,12 @@
     align-items: center;
     flex-direction: column;
     z-index: 1; 
-   animation: invisible 3s linear ;
-   
+   animation: invisible 3s ease-in-out  ;
+   visibility: hidden;
     
       i {
         animation: spin 3s linear ;
-        transform: scale(0);
+       
         animation-direction: alternate, reverse, normal;
         color: white;
 
@@ -24,12 +24,15 @@
 
   @keyframes invisible {
     0%{
+       display: block;
         opacity: 1;
+        visibility: visible;
     }
     100%{
-       opacity: 0;
-    
-        
+      
+     
+      opacity: 0;
+     
     }
     
   }
