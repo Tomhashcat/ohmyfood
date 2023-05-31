@@ -67,6 +67,7 @@ body {
   z-index: 1;
   animation: invisible 3s ease-in-out;
   visibility: hidden;
+  overflow: hidden;
 }
 .loader i {
   animation: spin 3s linear;
@@ -396,7 +397,7 @@ footer a {
   }
 }
 .restaurant .restaurant-cards {
-  margin-left: 20px;
+  margin-left: 10px;
 }
 @media (min-width: 768px) {
   .restaurant .restaurant-cards {
@@ -560,6 +561,10 @@ img {
   font-family: sans-serif;
   transform: scale(1);
 }
+.section .cards .card:hover {
+  transform: scale(1.02);
+  box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.25);
+}
 .section .cards .card .ball {
   display: none;
   white-space: nowrap;
@@ -575,10 +580,6 @@ img {
   .section .cards .card:hover {
     transform: scale(1.05);
     box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.25);
-  }
-  .section .cards .card:hover .prix {
-    display: flex;
-    position: absolute;
   }
   .section .cards .card:hover .fa-check {
     display: flex;
@@ -599,10 +600,12 @@ img {
     transform: left;
     display: block;
     transition: left;
-    transition: 5s;
+    animation: checked 1s;
     z-index: 1;
   }
   .section .cards .card:hover .prix {
+    display: flex;
+    position: absolute;
     height: 69px;
     margin-left: 270px;
     margin-top: 0;
@@ -611,10 +614,6 @@ img {
     align-items: center;
     padding-right: 5px;
   }
-}
-.section .cards .card:focus .prix {
-  display: flex;
-  position: absolute;
 }
 .section .cards .card:focus .fa-check {
   display: flex;
@@ -635,16 +634,36 @@ img {
   display: block;
   transition: left;
   z-index: 1;
-  transition: 5s;
+  animation: checked 1s;
 }
 .section .cards .card:focus .prix {
+  display: flex;
+  position: absolute;
   height: 69px;
-  margin-left: 270px;
+  margin-left: 250px;
   margin-top: 0;
   padding-right: 5px;
+  padding-left: 5px;
   position: absolute;
   text-align: center;
   align-items: center;
+  animation: checked2 1s;
+}
+@keyframes checked {
+  0% {
+    right: -5%;
+  }
+  100% {
+    right: 0%;
+  }
+}
+@keyframes checked2 {
+  0% {
+    left: 1.5%;
+  }
+  100% {
+    left: 2%;
+  }
 }
 .section .cards .card .fa-check {
   display: none;
@@ -657,8 +676,8 @@ img {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  margin-left: 5px;
-  margin-top: 2px;
+  margin-left: 15px;
+  margin-top: 5px;
   justify-content: space-between;
   position: absolute;
   width: 500px;

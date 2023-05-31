@@ -83,7 +83,11 @@ img {
             color: black;
             font-family: sans-serif;
             transform: scale(1);
-
+            &:hover {
+                transform: scale(1.02);
+               
+                box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.25);
+            }
             .ball {
                 display: none;
 
@@ -105,10 +109,7 @@ img {
 
                     box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.25);
 
-                    .prix {
-                        display: flex;
-                        position: absolute;
-                    }
+                   
 
                     .fa-check {
                         display: flex;
@@ -132,11 +133,13 @@ img {
                         display: block;
                         transition: left;
 
-                        transition: 5s;
+                        animation: checked 1s;
                         z-index: 1;
                     }
 
                     .prix {
+                        display: flex;
+                        position: absolute;
                         height: 69px;
                         margin-left: 270px;
                         margin-top: 0;
@@ -153,10 +156,7 @@ img {
 
             &:focus {
 
-                .prix {
-                    display: flex;
-                    position: absolute;
-                }
+                
 
                 .fa-check {
                     display: flex;
@@ -180,22 +180,46 @@ img {
                     display: block;
                     transition: left;
                     z-index: 1;
-                    transition: 5s;
+                    animation: checked 1s;
 
                 }
 
                 .prix {
+                    display: flex;
+                    position: absolute;
+                   
                     height: 69px;
-                    margin-left: 270px;
+                    margin-left: 250px;
                     margin-top: 0;
                     padding-right: 5px;
+                    padding-left: 5px;
                     position: absolute;
                     text-align: center;
                     align-items: center;
+                    animation: checked2 1s;
+
 
                 }
 
 
+            }
+            @keyframes checked {
+                0%{
+                   right:-5%;
+                }
+                
+                100%{
+                    right:0%
+                }
+            }
+            @keyframes checked2 {
+                0%{
+                   left:1.5%;
+                }
+                
+                100%{
+                    left:2%
+                }
             }
 
             .fa-check {
@@ -215,8 +239,8 @@ img {
                 display: flex;
                 flex-wrap: wrap;
                 flex-direction: column;
-                margin-left: 5px;
-                margin-top: 2px;
+                margin-left: 15px;
+                margin-top: 5px;
                 justify-content: space-between;
                 position: absolute;
                 width: 500px;
