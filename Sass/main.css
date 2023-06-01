@@ -542,7 +542,7 @@ a {
 h1 {
   font-family: "Shrikhand", cursive;
 }
-@media (min-width: 768px) {
+@media (min-width: 1440px) {
   h1 {
     text-align: center;
   }
@@ -571,7 +571,17 @@ img {
   font-weight: 300;
   margin-left: 20px;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
+  .section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 100px;
+    width: 80%;
+  }
+}
+@media (min-width: 1440px) {
   .section {
     display: flex;
     flex-wrap: wrap;
@@ -744,11 +754,19 @@ img {
 @media (min-width: 768px) {
   .section .cards .card .prix {
     margin-left: 330px;
-    margin-top: 35px;
   }
 }
 .section .cards .card p {
   margin-top: 5px;
+  margin-right: 200px;
+}
+@media (min-width: 1024px) {
+  .section .cards .card p {
+    display: flex;
+    align-self: start;
+    padding-left: 0;
+    margin-right: 250px;
+  }
 }
 .section .Plats {
   margin-top: 80px;
