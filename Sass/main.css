@@ -164,12 +164,17 @@ header .recherche {
 header .recherche i {
   color: black;
   position: absolute;
-  margin-left: 30%;
+  margin-left: 115px;
   margin-top: 17px;
   width: 20px;
   height: 20px;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
+  header .recherche i {
+    margin-left: 425px;
+  }
+}
+@media (min-width: 1440px) {
   header .recherche i {
     margin-left: 45%;
   }
@@ -257,12 +262,13 @@ footer a {
 .reservation .Titre-Reservation {
   text-align: center;
 }
-@media (min-width: 768px) {
-  .reservation .Titre-Reservation {
+@media (min-width: 1440px) {
+  .reservation {
     font-size: 40px;
   }
 }
-.reservation p {
+
+p {
   display: flex;
   flex-wrap: wrap;
   text-align: center;
@@ -272,14 +278,15 @@ footer a {
   font-family: Roboto, sans-serif;
 }
 @media (min-width: 768px) {
-  .reservation p {
+  p {
     display: block;
     text-align: center;
     font-size: 17px;
     margin-top: 10px;
   }
 }
-.reservation .button-explorer {
+
+.button-explorer {
   margin-top: 50px;
   display: flex;
   align-items: center;
@@ -299,7 +306,7 @@ footer a {
   margin-top: 100px;
   transform: scale(1);
 }
-.reservation .button-explorer:hover {
+.button-explorer:hover {
   transform: scale(1.1);
   background: linear-gradient(193.33deg, #a577dc -11.44%, #f4aadf 123.93%);
   box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.25);
@@ -325,7 +332,17 @@ footer a {
   margin-left: 20px;
   margin-top: 40px;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
+  .Fonctionnement {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 90%;
+    align-items: center;
+    padding-left: 50px;
+  }
+}
+@media (min-width: 1440px) {
   .Fonctionnement {
     display: flex;
     margin-left: 70px;
@@ -397,6 +414,15 @@ footer a {
   margin-top: 40px;
   padding-top: 120px;
   padding-bottom: 20px;
+}
+@media (min-width: 1024px) {
+  .restaurant {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 100px;
+    align-items: center;
+  }
 }
 .restaurant .btn-new {
   display: flex;

@@ -27,12 +27,14 @@ header {
         i {
             color: black;
             position: absolute;
-            margin-left: 30%;
+            margin-left: 115px;
             margin-top: 17px;
             width: 20px;
             height: 20px;
-
-            @media (min-width:768px) {
+            @media (min-width:1024px) {
+                margin-left: 425px;
+            }
+            @media (min-width:1440px) {
                 margin-left: 45%;
             }
 
