@@ -79,22 +79,7 @@
         justify-content: space-evenly;
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    button {
+ button {
         @include button-fonctionnement;
         cursor: pointer;
 
@@ -135,6 +120,7 @@
     @media(min-width:768px) {}
 
 }
+
 
 .Titre-Restaurant {
 
@@ -258,3 +244,16 @@
         
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+   
+

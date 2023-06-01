@@ -1,112 +1,115 @@
 .loader {
+   
+    @media (min-width:768px) {
+        padding-top: 20px;
+        flex-direction: row;
+    }
+    background:  url('images/restaurant-food-frame-with-chalkboard-background.jpg');
     position: absolute;
     width: 100%;
     height: 125%;
-    background: #99E2D0;
+    
+    background:#99E2D0;
     display: flex;
-    padding-top: 120px;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    z-index: 1; 
-   animation: invisible 6s ease-in-out  ;
-   visibility: hidden;
-   overflow: hidden;
-    
-      i {
-        animation: spin 3s linear ;
+
+    justify-content: center;
+    align-items:center;
+    cursor: wait;
+
+    z-index: 1;
+    animation: invisible 6s ease-in-out;
+    visibility: hidden;
+    overflow: hidden;
+img{
+    position: absolute;
+    object-fit: cover;
+    height: 50%;
+   padding-bottom: 200px;
+   opacity: 0.7;
+   @include box-shadow;
+   @media (min-width:768px) {
+    height: 100%;
+    margin-top: -25px;
+   }
+}
+    i {
+        display: flex;
+        width:100%;
+        height: 80px;
        
-        animation-direction: alternate, reverse, normal;
-        color: white;
-
-    }
-   
-} 
-
-  @keyframes invisible {
-    0%{
-       display: block;
-        opacity: 1;
-        visibility: visible;
-    }
-    50%{
-        opacity: 1;
-        visibility: visible;
-    }
-    100%{
       
-     
-      opacity: 0;
-     
-    }
-    
-  }
+        @media (min-width:768px) {
+            width: 150px;
+            color: #99E2D0;
+        }
 
-   
-   
-   @keyframes spin {
+        animation: spin 3s linear;
+
+        animation-direction: alternate,
+        reverse,
+        normal;
+        color: #99E2D0;
+
+    }
+
+}
+
+@keyframes invisible {
     0% {
-        
-        transform: rotate(0deg);
-      
+        display: block;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    50% {
+
+        opacity: 1;
+        visibility: visible;
     }
 
     100% {
-      
+
+
+        opacity: 0;
+
+    }
+
+}
+
+
+
+@keyframes spin {
+    0% {
+
+        transform: rotate(0deg);
+        transform: scale(2);
+       
+    }
+
+   
+
+    50% {
+        
+        transform: scale(0.5);
+transform: rotate(45deg);
+
+    }
+
+    100% {
+        transform: scale(1);
         transform: rotate(360deg);
-     
 
-    }}
-   
-.box1 {
 
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 20px;
-    width: 1500px;
-    justify-content: space-around;
-    position: absolute;
+    }
+}
+
+.box {
+ 
+padding-left: 40px;
+  margin-bottom:150px;
+margin-left: 5px;
 
 
 
 
 }
-
-.box2 {
-
-    display: flex;
-    margin-top: 200px;
-    flex-direction: row;
-    position: absolute;
-    width: 1500px;
-    justify-content: space-around;
-    height: 400px;
-
-
-}
-
-.box3 {
-
-    display: flex;
-
-    flex-direction: row;
-    position: absolute;
-    justify-content: space-around;
-    width: 1000px;
-    height: 400px;
-
-
-}
-    
- 
-   
-  
-    
- 
-   
- 
-
-
-
-
-
