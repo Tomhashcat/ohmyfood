@@ -1,6 +1,12 @@
 
 
 header {
+    .fa-arrow-left{
+      cursor: pointer;  
+      font-size: 22px;
+      
+      margin-left: -80px;
+    }
     logo{
         font-size: 30px;
     }

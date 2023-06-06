@@ -12,104 +12,127 @@
     height: 50px;
     border: 0;
     border-radius: 25px;
-   
-    
+
+
 
 }
+
 @mixin button-purple {
     margin-top: 40px;
     color: White;
     background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
+
 @mixin button-fonctionnement {
-   
-    @media (min-width:1024) {
-       
-        }
-    width: 323px;
+    width: 315px;
     height: 73px;
     border-radius: 20px;
     background-color: #F7F7F7;
-    border:none;
-   
-        
+    border: none;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
     margin-top: 30px;
-   
-    @media(min-width:768px) {
-       
+
+
+
+    @media (min-width:1024px) {
+        width: 310px;
+        
+       margin-left: 15px;
+    }
+
+
+
+    @media(min-width:1440px) {
+        width: 323px;
+        display:inline;
+        justify-content: space-between;
+        margin-left: 80px;
     }
 }
+
 /*CERCLE FONCTIONNEMENT*/
 @mixin circle {
 
     display: flex;
     justify-content: space-around;
-   
+
     color: white;
     width: 30px;
     height: 30px;
     border-radius: 25px;
     background-color: #9356DC;
     position: absolute;
-   
+
 
 }
+
 /*ICONES*/
-@mixin icone-button-fonctionnement{
-    
+@mixin icone-button-fonctionnement {
+
     position: relative;
     margin: 0;
     margin-right: 30px;
     color: #9356DC;
     width: 13px;
     height: 25px;
-   
-    
+
+
 
 }
+
 /*CARDS*/
-@mixin card-restaurant{
-    width: 340px;
+@mixin card-restaurant {
+    width: 330px;
     height: 251px;
     border-radius: 15px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     margin-top: 15px;
-    @media(min-witdh:768px){
+
+    @media (min-width:1024px) {
+        margin-left: 0px;
+    }
+
+    @media(min-witdh:1440px) {
         width: 490px;
         height: 251px;
         border-radius: 15px;
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
         margin-top: 15px;
     }
-    
+
 
 }
-@mixin img-card{ width: 340px;
+
+@mixin img-card {
+    width: 330px;
     height: 150px;
     object-fit: cover;
-    border-radius: 15px 15px 0px 0px;}
+    border-radius: 15px 15px 0px 0px;
+}
 
-@mixin card-text{ margin-left: 12px;}
+@mixin card-text {
+    margin-left: 12px;
+}
 
 /*BTN-NEW*/
 
-@mixin btn-new{
+@mixin btn-new {
     display: flex;
-    width:80px;
+    width: 80px;
     height: 29px;
     background: #99E2D0;
     color: white;
     border-radius: 2px;
-    position :absolute;
-    
-    justify-content: center;
-   align-items: center;
+    position: absolute;
 
-    
+    justify-content: center;
+    align-items: center;
+
+
 
 }
-@mixin box-shadow{
-    box-shadow:  0px 4px 15px rgba(0, 0, 0, 0.15);
+
+@mixin box-shadow {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
