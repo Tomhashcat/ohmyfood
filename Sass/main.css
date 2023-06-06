@@ -160,6 +160,11 @@ header .fa-arrow-left {
   font-size: 22px;
   margin-left: -80px;
 }
+@media (min-width: 768px) {
+  header .fa-arrow-left {
+    margin-left: -600px;
+  }
+}
 header logo {
   font-size: 30px;
 }
