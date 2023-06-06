@@ -109,6 +109,9 @@ img {
             color: black;
             font-family: sans-serif;
             transform: scale(1);
+            @media (min-width:1024px) {
+                width: 634px;
+            }
 
             &:hover {
                 transform: scale(1.02);
@@ -130,7 +133,7 @@ img {
                 z-index: -1;
 
                 @media (min-width:768px) {
-                    margin-left: 302px;
+                    margin-left: 336px;
                 }
 
             }
@@ -146,8 +149,8 @@ img {
                     .fa-check {
                         display: flex;
                         color: white;
-                        margin-top: 20px;
-                        margin-left: 10px;
+                        margin-top: 25px;
+                        margin-left: 20px;
                         width: 30px;
                         height: 30px;
                         border-radius: 25px;
@@ -167,6 +170,9 @@ img {
                         margin-left: 280px;
                         animation: checked 1s;
                         z-index: 1;
+                        @media (min-width:768px) {
+                            margin-left: 564px;
+                        }
                     }
 
                     .prix {
@@ -180,6 +186,9 @@ img {
                         align-items: center;
                         padding-right: 15px;
                         padding-left: 15px;
+                        @media (min-width:768px) {
+                            margin-left: 515px;
+                        }
 
                     }
 
@@ -214,6 +223,9 @@ img {
                     transition: left;
                     z-index: 1;
                     animation: checked 1s;
+                    @media (min-width:768px) {
+                        margin-left: 564px;
+                    }
 
                 }
 
@@ -230,6 +242,9 @@ img {
                     text-align: center;
                     align-items: center;
                     animation: checked2 1s;
+                    @media (min-width:768px) {
+                        margin-left: 514px;
+                    }
 
 
                 }
@@ -290,7 +305,7 @@ img {
                 border-radius: 25px;
 
                 @media (min-width:1024px) {
-                    margin-left: 315px;
+                    margin-left: 574px;
 
                 }
 
