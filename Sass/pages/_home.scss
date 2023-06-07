@@ -273,36 +273,37 @@ p {
 
         .card-body {
             display: flex;
-            flex-wrap: wrap;
-            flex-direction: column;
+            justify-content: space-between;
+           
 
             margin-top: 15px;
 
 
-            .fa-heart {
-                margin-left: 290px;
-                @media (min-width:768px) {
-                    margin-left: 420px;
-                }
+            .fa-solid {
+                margin-left: 0px;
+
+                
             }
 
-            p {
-                display: flex;
-                flex-wrap: wrap;
-                text-align: center;
-                margin: 10px;
-                width: 80%;
-                margin-top: 5px;
-                font-family: Roboto, sans-serif;
-            }
+           
+        }
 
-
+        p {
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+            margin: 10px;
+            width: 80%;
+            margin-top: 5px;
+            font-family: Roboto, sans-serif;
         }
 
 
     }
 
 
-
-
 }
+
+
+
+

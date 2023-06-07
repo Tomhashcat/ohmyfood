@@ -5,85 +5,68 @@
 
 .heart-animation {
   display: flex;
-  position: absolute;
+  position: relative;
   margin-top: 15px;
- 
- .fa-solid {
+  width: 60px;
+
+  .fa-solid {
     display: none;
     margin-bottom: 120px;
     position: absolute;
     font-size: 22px;
-    margin-left: 100px;
-    color: #9356DC;
+
+    background: $linear-background;
     overflow: hidden;
-    top:  0%;
+   
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
     @media (min-width:768px) {
       margin-left: 0;
     }
   }
 
+  &:hover {
 
-   .fa-regular {
+    .fa-solid {
+      display:inline;
+      
+      animation: grow 0.3s;
+      margin-top: 13px;
+      border-color: #9356DC;
+    }
+
+
+  }
+
+
+  .fa-regular {
     position: absolute;
     overflow: hidden;
     font-size: 22px;
-    margin-left: 125px;
     margin-top: 13px;
-    @media (min-width:768px) {
-      margin-left: -100;
-    }
+
+
+  }
+
+
 }
 
-&:hover {
- .fa-regular {
-    color:  #9356DC;
-    
-  }
-  .fa-solid {
-    display: block;
-    top: 100%;
-    animation: grow 0.3s;
-    margin-top:13px;
-    margin-left: 125px;
-  }
-}
-}
-  
 
 
 @keyframes grow {
   0% {
-    transform: scaleY(0);
+    transform: scale(0);
 
   }
 
   50% {
-    transform: scaleY(0.2);
+    transform: scale(1.5);
   }
 
   100% {
-    transform: scaleY(1);
+    transform: scale(1.2);
 
 
   }
 }
-
-  
-
-
-
-
-
-  
-
-
-
-
- 
-
-
-
-
-
-
-
