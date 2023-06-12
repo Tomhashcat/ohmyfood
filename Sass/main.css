@@ -161,8 +161,13 @@ header .fa-arrow-left {
     margin-left: -600px;
   }
 }
-header logo {
+header .logo {
   font-size: 30px;
+}
+@media (min-width: 768px) {
+  header .logo {
+    font-size: 35px;
+  }
 }
 header input {
   background-color: #EAEAEA;
@@ -214,7 +219,7 @@ footer {
     flex-direction: row-reverse;
   }
 }
-footer logo {
+footer .logo {
   font-family: "Shrikhand", sans-serif;
   font-size: 18px;
   margin-left: 30px;
@@ -222,9 +227,14 @@ footer logo {
   align-self: flex-start;
 }
 @media (min-width: 768px) {
-  footer logo {
-    margin-left: 0px;
+  footer .logo {
+    margin-left: 85px;
     margin-top: 48px;
+  }
+}
+@media (min-width: 768px) {
+  footer .footer-links {
+    display: flex;
   }
 }
 footer li {
@@ -233,17 +243,28 @@ footer li {
   margin-left: 25px;
   cursor: pointer;
 }
+@media (min-width: 768px) {
+  footer li {
+    margin-left: 5px;
+  }
+}
+@media (min-width: 768px) {
+  footer .mentions {
+    margin-left: 55px;
+  }
+}
 footer ul {
   padding-left: 0px;
   margin-left: 0px;
   line-height: 25px;
+  margin-bottom: 0px;
 }
 @media (min-width: 768px) {
   footer ul {
     display: flex;
     flex-direction: row;
     align-self: flex-end;
-    margin-right: 50px;
+    margin-right: 20px;
     margin-top: 50px;
   }
 }
@@ -273,6 +294,7 @@ footer a {
 @media (min-width: 768px) {
   footer a {
     margin-top: 53px;
+    margin-left: 0px;
   }
 }
 
@@ -331,23 +353,23 @@ p {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   margin-top: 100px;
-  transform: scale(1);
+  /*transform: scale(1);*/
 }
 .button-explorer:hover {
-  transform: scale(1.1);
+  /*transform: scale(1.1);*/
   background: linear-gradient(193.33deg, #a577dc -11.44%, #f4aadf 123.93%);
   box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.25);
 }
 
 .Titre-Fonctionnement {
-  margin-left: 15px;
+  text-align: left;
+  margin-left: auto;
+  width: 95%;
   margin-top: 40px;
 }
 @media (min-width: 1024px) {
   .Titre-Fonctionnement {
-    text-align: center;
     margin-top: 80px;
-    margin-right: 0;
     font-size: 30px;
   }
 }
@@ -363,7 +385,7 @@ p {
   display: inline-block;
   text-align: center;
   margin-left: 20px;
-  margin-top: 40px;
+  margin-top: 0px;
 }
 @media (min-width: 1024px) {
   .Fonctionnement {
@@ -378,7 +400,7 @@ p {
   .Fonctionnement {
     display: inline;
     flex-wrap: wrap;
-    margin-left: 95px;
+    margin-left: 80px;
     justify-content: space-between;
   }
 }
@@ -416,6 +438,7 @@ p {
   background-color: #9356DC;
   position: absolute;
   margin-left: -20px;
+  margin-top: -5px;
 }
 @media (min-width: 1440px) {
   .Fonctionnement button .cercle {
@@ -437,18 +460,18 @@ p {
   margin-right: 15px;
 }
 .Fonctionnement button:hover {
-  transform: scale(1.1);
+  /*transform: scale(1.1);*/
   box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.25);
 }
 .Titre-Restaurant {
   margin-left: 17px;
-  margin-top: 80px;
+  margin-top: 100px;
   position: absolute;
 }
 @media (min-width: 1024px) {
   .Titre-Restaurant {
     margin-top: 80px;
-    margin-left: 415px;
+    margin-left: 15px;
     margin-right: 0;
     font-size: 30px;
   }
@@ -465,7 +488,7 @@ p {
   justify-content: center;
   background-color: #F6F6F6;
   margin-top: 40px;
-  padding-top: 120px;
+  padding-top: 100px;
   padding-bottom: 20px;
 }
 @media (min-width: 1024px) {
@@ -534,7 +557,7 @@ p {
   }
 }
 .restaurant .card:hover {
-  transform: scale(1.05);
+  /*transform: scale(1.05);*/
   box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.25);
 }
 @media (min-width: 768px) {
@@ -622,6 +645,7 @@ img {
   position: relative;
   border-radius: 25px;
   padding-bottom: 70px;
+  /*ANIMATION MAGIC*/
 }
 .section .green-title {
   display: flex;
@@ -665,7 +689,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   animation: magic 3s ease-in-out;
-  animation-delay: 3s;
+  animation-delay: 0s;
 }
 @media (min-width: 768px) {
   .section .cards {
@@ -678,7 +702,6 @@ img {
   flex-wrap: wrap;
   margin-left: 10px;
   margin-bottom: 20px;
-  overflow: hidden;
   width: 350px;
   height: 80px;
   border: 1px solid;
@@ -696,7 +719,7 @@ img {
   }
 }
 .section .cards .card:hover {
-  transform: scale(1.02);
+  /*transform: scale(1.02);*/
   box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.25);
 }
 .section .cards .card .ball {
@@ -717,7 +740,7 @@ img {
 }
 @media (min-width: 768px) {
   .section .cards .card:hover {
-    transform: scale(1.05);
+    /* transform: scale(1.05);*/
     box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.25);
   }
   .section .cards .card:hover .fa-check {
@@ -736,7 +759,6 @@ img {
     text-align: center;
   }
   .section .cards .card:hover .ball {
-    transform: left;
     display: block;
     transition: left;
     margin-left: 280px;
@@ -834,6 +856,9 @@ img {
 .section .cards .card h3 {
   margin-top: 5px;
   margin-bottom: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .section .cards .card .card-body {
   display: flex;
@@ -846,10 +871,10 @@ img {
   width: 500px;
 }
 .section .cards .card .prix {
-  margin-top: 40px;
+  margin-top: 25px;
   margin-left: 310px;
   background-color: #F6F6F6;
-  border-radius: 25px;
+  border-radius: 0px 0px 25px;
 }
 @media (min-width: 1024px) {
   .section .cards .card .prix {
@@ -859,6 +884,9 @@ img {
 .section .cards .card p {
   margin-top: 5px;
   margin-right: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 @media (min-width: 1024px) {
   .section .cards .card p {
@@ -908,7 +936,7 @@ img {
   0% {
     visibility: visible;
     transform: scale(0);
-    rotate: 180deg;
+    rotate: 360deg;
   }
   50% {
     visibility: visible;

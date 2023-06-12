@@ -1,33 +1,41 @@
 footer {
-   
+
     background-color: #353535;
     color: #ffffff;
     padding-top: 20px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-   
-padding-bottom: 45px;
 
-@media (min-width:768px){
-   flex-direction: row-reverse;
-  
+    padding-bottom: 45px;
 
-}
+    @media (min-width:768px) {
+        flex-direction: row-reverse;
 
 
+    }
 
-    logo {
+
+
+    .logo {
         font-family: $h1-font-family;
         font-size: 18px;
         margin-left: 30px;
         width: 200px;
 
         align-self: flex-start;
-       @media (min-width:768px){
-        margin-left: 0px;
-        margin-top: 48px;
-       }
+
+        @media (min-width:768px) {
+            margin-left: 85px;
+            margin-top: 48px;
+
+        }
+    }
+
+    .footer-links {
+        @media (min-width:768px) {
+            display: flex;
+        }
     }
 
     li {
@@ -35,23 +43,39 @@ padding-bottom: 45px;
         list-style-type: none;
         margin-left: 25px;
         cursor: pointer;
+
+        @media (min-width:768px) {
+            margin-left: 5px;
+        }
+
+
     }
+
+    .mentions {
+        @media (min-width:768px) {
+            margin-left: 55px;
+        }
+    }
+
+
 
     ul {
         padding-left: 0px;
         margin-left: 0px;
         line-height: 25px;
+        margin-bottom: 0px;
 
         @media(min-width:768px) {
             display: flex;
             flex-direction: row;
             align-self: flex-end;
-            margin-right: 50px;
+            margin-right: 20px;
             margin-top: 50px;
         }
     }
 
     .contact {
+
         color: White;
     }
 
@@ -74,13 +98,16 @@ padding-bottom: 45px;
     a {
         margin-left: 25px;
         text-decoration: none;
-       margin-top: -10px;
-       @media (min-width:768px) {
-        margin-top: 53px;
-    }
-    }
-   
+        margin-top: -10px;
 
-   
+        @media (min-width:768px) {
+            margin-top: 53px;
+            margin-left: 0px;
+
+        }
+    }
+
+
+
 
 }

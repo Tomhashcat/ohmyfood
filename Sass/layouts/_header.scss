@@ -13,8 +13,11 @@ header {
         margin-left: -600px;
       }
     }
-    logo{
+    .logo{
         font-size: 30px;
+        @media (min-width:768px) {
+            font-size: 35px;
+        }
     }
     display: flex;
     justify-content: center;

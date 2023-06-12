@@ -1,7 +1,6 @@
 a {
     text-decoration: none;
     color: black;
-
 }
 
 h1 {
@@ -14,9 +13,9 @@ h1 {
 }
 
 .heart-animation {
-   
-        margin-left: 15px;
-    }
+
+    margin-left: 15px;
+}
 
 
 img {
@@ -26,27 +25,30 @@ img {
 }
 
 .section {
-.green-title{ 
-display: flex;
-flex-direction: column;   
-align-items:flex-start; 
-    .titre-EPD {
-        font-weight: 300;
-        margin-left: 10px;
-        margin-bottom: 5px;
-        
-        
+    .green-title {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .titre-EPD {
+            font-weight: 300;
+            margin-left: 10px;
+            margin-bottom: 5px;
+
+
+        }
+
+        .green {
+            display: flex;
+            width: 55px;
+            height: 4px;
+            background: #99E2D0;
+            margin-bottom: 20px;
+            margin-left: 10px;
+
+        }
     }
-.green{
-    display: flex;
-    width: 55px;
-    height: 4px;
-   background:#99E2D0 ;
-    margin-bottom: 20px;
-    margin-left: 10px;
-    
-}}
-  
+
     background-color: #F6F6F6;
 
     margin-top: -60px;
@@ -84,7 +86,7 @@ align-items:flex-start;
 
 
         animation: magic 3s ease-in-out;
-        animation-delay: 3s;
+        animation-delay: 0s;
 
         @media(min-width:768px) {
             flex-direction: column;
@@ -98,7 +100,7 @@ align-items:flex-start;
             margin-left: 10px;
             margin-bottom: 20px;
 
-            overflow: hidden;
+
             width: 350px;
             height: 80px;
             border: 1px solid;
@@ -115,7 +117,7 @@ align-items:flex-start;
             }
 
             &:hover {
-                transform: scale(1.02);
+                /*transform: scale(1.02);*/
 
                 box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.25);
             }
@@ -141,11 +143,9 @@ align-items:flex-start;
 
             @media (min-width:768px) {
                 &:hover {
-                    transform: scale(1.05);
+                    /* transform: scale(1.05);*/
 
                     box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.25);
-
-
 
                     .fa-check {
                         display: flex;
@@ -162,10 +162,11 @@ align-items:flex-start;
                         align-items: center;
                         text-align: center;
 
+
                     }
 
                     .ball {
-                        transform: left;
+
                         display: block;
                         transition: left;
                         margin-left: 280px;
@@ -176,6 +177,10 @@ align-items:flex-start;
                             margin-left: 564px;
                         }
                     }
+
+
+
+
 
                     .prix {
                         display: flex;
@@ -236,7 +241,6 @@ align-items:flex-start;
                 .prix {
                     display: flex;
                     position: absolute;
-
                     height: 69px;
                     margin-left: 230px;
                     margin-top: 0;
@@ -286,7 +290,9 @@ align-items:flex-start;
             h3 {
                 margin-top: 5px;
                 margin-bottom: 0;
-
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
 
             .card-body {
@@ -301,13 +307,16 @@ align-items:flex-start;
                 width: 500px;
 
 
+
+
             }
 
             .prix {
-                margin-top: 40px;
+                margin-top: 25px;
                 margin-left: 310px;
+
                 background-color: #F6F6F6;
-                border-radius: 25px;
+                border-radius: 0px 0px 25px;
 
                 @media (min-width:1024px) {
                     margin-left: 574px;
@@ -316,11 +325,12 @@ align-items:flex-start;
 
             }
 
-
-
             p {
                 margin-top: 5px;
                 margin-right: 200px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
 
                 @media (min-width:1024px) {
                     display: flex;
@@ -333,10 +343,7 @@ align-items:flex-start;
             }
 
         }
-
-
     }
-
 
     .Plats {
         margin-top: 80px;
@@ -366,11 +373,13 @@ align-items:flex-start;
 
     }
 
+
+    /*ANIMATION MAGIC*/
     @keyframes magic {
         0% {
             visibility: visible;
             transform: scale(0);
-            rotate: (180deg);
+            rotate: (360deg);
         }
 
         50% {
