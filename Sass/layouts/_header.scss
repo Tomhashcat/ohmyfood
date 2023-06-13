@@ -4,7 +4,6 @@ header {
     .fa-arrow-left{
       cursor: pointer;  
       font-size: 22px;
-      
       margin-left: -80px;
       @media (min-width:1024px) {
         margin-left: -400px;
@@ -13,16 +12,17 @@ header {
         margin-left: -600px;
       }
     }
+      
     .logo{
         font-size: 30px;
         @media (min-width:768px) {
             font-size: 35px;
         }
     }
-    display: flex;
+   @include flex-wrap;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    
     font-family: $h1-font-family;
 
     input {
@@ -35,8 +35,7 @@ header {
 
     .recherche {
 
-        display: flex;
-        flex-wrap: wrap;
+        @include flex-wrap;
         width: 100%;
 
         i {

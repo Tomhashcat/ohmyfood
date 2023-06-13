@@ -1,12 +1,10 @@
 footer {
 
     background-color: #353535;
-    color: #ffffff;
+    color: $color-secondary;
     padding-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
+    @include flex-wrap;
     flex-direction: column;
-
     padding-bottom: 45px;
 
     @media (min-width:768px) {
@@ -16,13 +14,11 @@ footer {
     }
 
 
-
     .logo {
-        font-family: $h1-font-family;
+        font-family: $h1-font-family-title;
         font-size: 18px;
         margin-left: 30px;
         width: 200px;
-
         align-self: flex-start;
 
         @media (min-width:768px) {
@@ -39,7 +35,7 @@ footer {
     }
 
     li {
-        font-family: Roboto, sans-serif;
+        font-family: $p-font-family;
         list-style-type: none;
         margin-left: 25px;
         cursor: pointer;
@@ -76,7 +72,7 @@ footer {
 
     .contact {
 
-        color: White;
+        color: $color-secondary;
     }
 
     .fa-utensils {
@@ -84,7 +80,7 @@ footer {
     }
 
     .fa-footer {
-        color: white;
+        color: $color-secondary;
         position: inherit;
         margin-left: 0;
         margin-right: 5px;
@@ -106,8 +102,4 @@ footer {
 
         }
     }
-
-
-
-
 }

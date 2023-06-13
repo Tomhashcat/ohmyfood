@@ -1,7 +1,7 @@
 .reservation {
     padding-top: 40px;
     padding-bottom: 8%;
-    background-color: #F6F6F6;
+    background-color: $color-secondary;
 
     .Titre-Reservation {
         text-align: center;
@@ -19,17 +19,15 @@
 }
 
 p {
-    display: flex;
-    flex-wrap: wrap;
+    @include flex-wrap;
     text-align: center;
     margin: 10px auto;
     width: 80%;
     margin-top: 5px;
-    font-family: Roboto, sans-serif;
+    font-family: $p-font-family;
 
     @media(min-width:768px) {
-        display: block;
-        text-align: center;
+        @include block-center;
         font-size: 17px;
         margin-top: 10px;
     }
@@ -40,15 +38,16 @@ p {
     @include button-purple;
     cursor: pointer;
     margin-top: 100px;
+
     /*transform: scale(1);*/
-
-
     &:hover {
         /*transform: scale(1.1);*/
         background: $linear-background;
-        box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.25);
+        box-shadow: $box-shadow;
     }
 }
+
+
 
 .Titre-Fonctionnement {
     text-align: left;
@@ -77,44 +76,80 @@ p {
 
     @media (min-width:1024px) {
         display: inline;
-
         flex-direction: column;
         justify-content: center;
         width: 90%;
         align-items: center;
     }
 
+
     @media (min-width:1440px) {
         display: inline;
         flex-wrap: wrap;
         margin-left: 80px;
-
         justify-content: space-between;
 
     }
 
+
     button {
-        @include button-fonctionnement;
+
+        width: 315px;
+        height: 73px;
+        border-radius: 20px;
+        background-color: $color-third;
+        border: none;
+        box-shadow: $box-shadow;
+        margin-top: 30px;
         cursor: pointer;
 
+        @media (min-width:1024px) {
+            width: 310px;
+            margin-left: 15px;
+        }
 
+        @media(min-width:1440px) {
+            width: 323px;
+            display: inline;
+            justify-content: space-between;
+            margin-left: 80px;
+        }
+
+
+
+
+
+        /*CERCLE BUTTONS FONCTIONNEMENT*/
         .cercle {
-            @include circle;
+            display: flex;
+            justify-content: space-around;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 25px;
+            background-color: $color-primary;
+            position: absolute;
             margin-left: -20px;
             margin-top: -5px;
 
             @media(min-width:1440px) {
-
                 margin-right: 500px;
             }
         }
+
+
 
         span {
             margin-top: 6px;
         }
 
         .fa-icone {
-            @include icone-button-fonctionnement;
+            position: relative;
+            margin: 0;
+            margin-right: 30px;
+            color: $color-primary;
+            width: 13px;
+            height: 25px;
         }
 
         .fa-mobile-screen {
@@ -123,8 +158,7 @@ p {
 
         &:hover {
             /*transform: scale(1.1);*/
-
-            box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.25);
+            box-shadow: $box-shadow;
         }
 
     }
@@ -132,6 +166,8 @@ p {
     @media(min-width:768px) {}
 
 }
+
+
 
 .Titre-Restaurant {
 
@@ -153,11 +189,9 @@ p {
 }
 
 .restaurant {
-    display: flex;
-    flex-wrap: wrap;
-
-    justify-content: center;
-    background-color: #F6F6F6;
+    @include flex-wrap;
+    text-align: center;
+    background-color: $color-secondary;
     margin-top: 40px;
     padding-top: 100px;
     padding-bottom: 20px;
@@ -172,11 +206,9 @@ p {
 
     .btn-new {
         @include btn-new;
-        margin-left: 240px;
-        margin-top: 15px;
 
         @media (min-width:768px) {
-            margin-left: 400px;
+            margin-left: 40%;
         }
     }
 
@@ -184,8 +216,7 @@ p {
         margin-left: 10px;
 
         @media(min-width:1024px) {
-            display: flex;
-            flex-wrap: wrap;
+            @include flex-wrap;
             justify-content: space-around;
         }
 
@@ -197,19 +228,35 @@ p {
 
     .card {
 
-        @include card-restaurant;
+        width: 330px;
+        height: 251px;
+        border-radius: $border-radius;
+        box-shadow: $box-shadow;
+        margin-top: 15px;
+
+        @media (min-width:1024px) {
+            margin-left: 0px;
+        }
+
+        @media(min-witdh:1440px) {
+            width: 490px;
+            height: 251px;
+            border-radius: $border-radius;
+            box-shadow: $box-shadow;
+            margin-top: 15px;
+        }
 
         &:hover {
             /*transform: scale(1.05);*/
 
-            box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.25);
+            box-shadow: $box-shadow;
         }
 
         @media(min-width:768px) {
             width: 490px;
             height: 251px;
-            border-radius: 15px;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: $border-radius;
+            box-shadow: $box-shadow;
             margin-top: 15px;
         }
 
@@ -220,13 +267,13 @@ p {
         }
 
         img {
-            @include img-card;
+            width: 330px;
+            height: 150px;
+            @include img-cover;
 
             @media(min-width:768px) {
                 width: 490px;
                 height: 150px;
-                object-fit: cover;
-                border-radius: 15px 15px 0px 0px;
             }
         }
 
@@ -249,13 +296,12 @@ p {
         }
 
         p {
-            display: flex;
-            flex-wrap: wrap;
+            @include flex-wrap;
             text-align: center;
             margin: 10px;
             width: 80%;
             margin-top: 5px;
-            font-family: Roboto, sans-serif;
+            font-family:$p-font-family;
         }
     }
 }
