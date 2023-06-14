@@ -80,7 +80,7 @@ body {
   height: 50%;
   padding-bottom: 200px;
   opacity: 0.7;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
 @media (min-width: 768px) {
   .loader img {
@@ -139,9 +139,9 @@ body {
 
 header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   font-family: "Shrikhand", sans-serif;
 }
 header .fa-arrow-left {
@@ -267,13 +267,13 @@ footer ul {
   }
 }
 footer .contact {
-  color: White;
+  color: #F6F6F6;
 }
 footer .fa-utensils {
   margin-right: 5px;
 }
 footer .fa-footer {
-  color: white;
+  color: #F6F6F6;
   position: inherit;
   margin-left: 0;
   margin-right: 5px;
@@ -702,79 +702,76 @@ img {
   color: black;
   font-family: sans-serif;
   transform: scale(1);
-  /*&:focus {
-      .fa-check {
-          display: flex;
-          color: white;
-          margin-top: 25px;
-          margin-left: 15px;
-          width: 30px;
-          height: 30px;
-          border-radius: 25px;
-          background-color: white;
-          color: #99E2D0;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-align: center;
-
-      }
-
-      .ball {
-
-          display: block;
-          transition: left;
-          z-index: 1;
-          animation: checked 1s;
-
-          @media (min-width:768px) {
-              margin-left: 564px;
-          }
-
-      }
-
-      .prix {
-          display: flex;
-          position: absolute;
-          height: 69px;
-          margin-left: 230px;
-          margin-top: 0;
-          padding-right: 15px;
-          padding-left: 15px;
-          position: absolute;
-          text-align: center;
-          align-items: center;
-          animation: checked2 1s;
-
-          @media (min-width:768px) {
-              margin-left: 514px;
-          }
-      }
-  }*/
+  overflow: hidden;
 }
 @media (min-width: 1024px) {
   .section .cards .card {
     width: 634px;
   }
 }
-.section .cards .card:hover {
-  /*transform: scale(1.02);*/
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+.section .cards .card .card-body {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-left: 15px;
+  margin-top: 15px;
+  justify-content: space-between;
+  width: 85%;
 }
-.section .cards .card .ball {
+.section .cards .card .card-body .body-text {
+  width: 80%;
+}
+.section .cards .card .card-body .body-text h3 {
+  margin-top: 5px;
+  margin-bottom: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.section .cards .card .card-body .body-text p {
+  margin-top: 5px;
+  margin-right: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media (min-width: 1024px) {
+  .section .cards .card .card-body .body-text p {
+    display: flex;
+    align-self: start;
+    padding-left: 0;
+    margin-right: 250px;
+  }
+}
+.section .cards .card .card-body .valeur {
+  margin-right: -5%;
+}
+@media (min-width: 1024px) {
+  .section .cards .card .card-body .valeur {
+    margin-right: -10%;
+  }
+}
+.section .cards .card .card-body .valeur .prix {
+  display: flex;
+  text-align: center;
+  margin-top: 11px;
+  background-color: #F6F6F6;
+  border-radius: 0px 0px 25px;
+}
+.section .cards .card .card-body .valeur .ball {
   display: none;
   white-space: nowrap;
   width: 70px;
   height: 80px;
   background-color: #99E2D0;
-  position: absolute;
+  margin-right: -2%;
+  margin-bottom: -15px;
   border-radius: 0px 25px 25px 0px;
-  margin-left: 280px;
   z-index: -1;
 }
-@media (min-width: 768px) {
-  .section .cards .card .ball {
-    margin-left: 336px;
+@media (min-width: 1024px) {
+  .section .cards .card .card-body .valeur .ball {
+    margin-right: -2%;
   }
 }
 @media (min-width: 375px) {
@@ -796,35 +793,36 @@ img {
     align-items: center;
     text-align: center;
   }
-  .section .cards .card:hover .ball {
-    display: block;
+  .section .cards .card:hover .valeur {
+    display: flex;
+    margin-top: -15px;
+    margin-left: 61%;
+    position: absolute;
+    justify-content: space-between;
     transition: left;
-    margin-left: 280px;
-    animation: checked 1s;
-    z-index: 1;
+    animation: checked 0.5s ease-in-out;
   }
 }
-@media (min-width: 375px) and (min-width: 768px) {
-  .section .cards .card:hover .ball {
-    margin-left: 564px;
+@media (min-width: 375px) and (min-width: 1024px) {
+  .section .cards .card:hover .valeur {
+    margin-left: 78%;
   }
 }
 @media (min-width: 375px) {
-  .section .cards .card:hover .prix {
-    display: flex;
-    position: absolute;
-    height: 69px;
-    margin-left: 230px;
-    margin-top: 0;
-    text-align: center;
-    align-items: center;
-    padding-right: 15px;
-    padding-left: 15px;
+  .section .cards .card:hover .valeur .ball {
+    display: block;
+    z-index: 1;
   }
 }
-@media (min-width: 375px) and (min-width: 768px) {
-  .section .cards .card:hover .prix {
-    margin-left: 515px;
+@media (min-width: 375px) {
+  .section .cards .card:hover .valeur .prix {
+    height: 69px;
+    margin-right: -13px;
+    margin-top: -1px;
+    text-align: center;
+    align-items: center;
+    padding-right: 20px;
+    padding-left: 15px;
   }
 }
 @keyframes checked {
@@ -841,52 +839,6 @@ img {
   }
   100% {
     left: 2%;
-  }
-}
-.section .cards .card .fa-check {
-  display: none;
-}
-.section .cards .card h3 {
-  margin-top: 5px;
-  margin-bottom: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.section .cards .card .card-body {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  margin-left: 15px;
-  margin-top: 15px;
-  justify-content: space-between;
-  position: absolute;
-  width: 500px;
-}
-.section .cards .card .prix {
-  margin-top: 25px;
-  margin-left: 310px;
-  background-color: #F6F6F6;
-  border-radius: 0px 0px 25px;
-}
-@media (min-width: 1024px) {
-  .section .cards .card .prix {
-    margin-left: 574px;
-  }
-}
-.section .cards .card p {
-  margin-top: 5px;
-  margin-right: 200px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-@media (min-width: 1024px) {
-  .section .cards .card p {
-    display: flex;
-    align-self: start;
-    padding-left: 0;
-    margin-right: 250px;
   }
 }
 .section .Plats {

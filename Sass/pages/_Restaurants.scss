@@ -3,7 +3,7 @@ a {
 }
 
 h1 {
-    font-family: $h1-font-family;
+    font-family: $h1-font-family-title;
 
     @media (min-width:1440px) {
         text-align: center;
@@ -21,6 +21,12 @@ img {
 }
 
 .section {
+    background-color: $color-secondary;
+    margin-top: -60px;
+    position: relative;
+    border-radius: 25px;
+    padding-bottom: 70px;
+
     .green-title {
         display: flex;
         flex-direction: column;
@@ -43,11 +49,7 @@ img {
         }
     }
 
-    background-color: $color-secondary;
-    margin-top: -60px;
-    position: relative;
-    border-radius: 25px;
-    padding-bottom: 70px;
+
 
     @media (min-width:1024px) {
         @include flex-wrap;
@@ -92,33 +94,89 @@ img {
             color: black;
             font-family: sans-serif;
             transform: scale(1);
+            overflow: hidden;
 
             @media (min-width:1024px) {
                 width: 634px;
             }
 
+            .card-body {
 
-            &:hover {
-                /*transform: scale(1.02);*/
+                @include flex-wrap;
+                flex-direction: row;
+                margin-left: 15px;
+                margin-top: 15px;
+                justify-content: space-between;
 
-                box-shadow: $box-shadow;
-            }
+                width: 85%;
 
-            .ball {
-                display: none;
-                white-space: nowrap;
-                width: 70px;
-                height: 80px;
-                background-color: $color-frth;
-                position: absolute;
-                border-radius: 0px 25px 25px 0px;
-                margin-left: 280px;
-                z-index: -1;
+                .body-text {
+                    width: 80%;
 
-                @media (min-width:768px) {
-                    margin-left: 336px;
+                    h3 {
+                        margin-top: 5px;
+                        margin-bottom: 0;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+
+                    p {
+                        margin-top: 5px;
+                        margin-right: 200px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+
+                        @media (min-width:1024px) {
+                            display: flex;
+                            align-self: start;
+                            padding-left: 0;
+                            margin-right: 250px;
+                        }
+                    }
+                }
+
+                .valeur {
+                    margin-right: -5%;
+
+                    @media (min-width:1024px) {
+                        margin-right: -10%;
+                    }
+
+                    .prix {
+                        display: flex;
+                        text-align: center;
+                        margin-top: 11px;
+                        background-color: $color-secondary;
+                        border-radius: 0px 0px 25px;
+                    }
+
+                    .ball {
+                        display: none;
+                        white-space: nowrap;
+                        width: 70px;
+                        height: 80px;
+                        background-color: $color-frth;
+                        margin-right: -2%;
+                        margin-bottom: -15px;
+                        border-radius: 0px 25px 25px 0px;
+
+                        z-index: -1;
+
+                        @media (min-width:1024px) {
+                            margin-right: -2%;
+                        }
+
+
+                    }
                 }
             }
+
+
+
+
+
 
             @media (min-width:375px) {
                 &:hover {
@@ -143,93 +201,49 @@ img {
 
 
 
-
-                    .ball {
-
-                        display: block;
-                        transition: left;
-                        margin-left: 280px;
-                        animation: checked 1s;
-                        z-index: 1;
-
-                        @media (min-width:768px) {
-                            margin-left: 564px;
-                        }
-                    }
-
-                    .prix {
+                    .valeur {
                         display: flex;
+                        margin-top: -15px;
+                        margin-left: 61%;
                         position: absolute;
-                        height: 69px;
-                        margin-left: 230px;
-                        margin-top: 0;
-                        text-align: center;
-                        align-items: center;
-                        padding-right: 15px;
-                        padding-left: 15px;
+                        justify-content: space-between;
+                        transition: left;
+                        animation: checked 0.5s ease-in-out;
+
+                        @media (min-width:1024px) {
+                            margin-left: 78%;
+                        }
+
+                        .ball {
+
+                            display: block;
+                            z-index: 1;
+                        }
+
+                        .prix {
 
 
-                        @media (min-width:768px) {
-                            margin-left: 515px;
+                            height: 69px;
+                            margin-right: -13px;
+                            margin-top: -1px;
+                            text-align: center;
+                            align-items: center;
+                            padding-right: 20px;
+                            padding-left: 15px;
+
+
+                            @media (min-width:768px) {}
                         }
                     }
                 }
             }
 
-            /*&:focus {
-                .fa-check {
-                    display: flex;
-                    color: white;
-                    margin-top: 25px;
-                    margin-left: 15px;
-                    width: 30px;
-                    height: 30px;
-                    border-radius: 25px;
-                    background-color: white;
-                    color: #99E2D0;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    text-align: center;
-
-                }
-
-                .ball {
-
-                    display: block;
-                    transition: left;
-                    z-index: 1;
-                    animation: checked 1s;
-
-                    @media (min-width:768px) {
-                        margin-left: 564px;
-                    }
-
-                }
-
-                .prix {
-                    display: flex;
-                    position: absolute;
-                    height: 69px;
-                    margin-left: 230px;
-                    margin-top: 0;
-                    padding-right: 15px;
-                    padding-left: 15px;
-                    position: absolute;
-                    text-align: center;
-                    align-items: center;
-                    animation: checked2 1s;
-
-                    @media (min-width:768px) {
-                        margin-left: 514px;
-                    }
-                }
-            }*/
-
             @keyframes checked {
                 0% {
                     right: -5%;
                 }
+
+
 
                 100% {
                     right: 0%
@@ -245,61 +259,6 @@ img {
                     left: 2%
                 }
             }
-
-            .fa-check {
-                display: none;
-            }
-
-            h3 {
-                margin-top: 5px;
-                margin-bottom: 0;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-
-            .card-body {
-
-                @include flex-wrap;
-                flex-direction: column;
-                margin-left: 15px;
-                margin-top: 15px;
-                justify-content: space-between;
-                position: absolute;
-                width: 500px;
-            }
-
-            .prix {
-                margin-top: 25px;
-                margin-left: 310px;
-                background-color: $color-secondary;
-                border-radius: 0px 0px 25px;
-
-                @media (min-width:1024px) {
-                    margin-left: 574px;
-
-                }
-
-            }
-
-
-            p {
-                margin-top: 5px;
-                margin-right: 200px;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-
-                @media (min-width:1024px) {
-                    display: flex;
-                    align-self: start;
-                    padding-left: 0;
-                    margin-right: 250px;
-
-
-                }
-            }
-
         }
     }
 
