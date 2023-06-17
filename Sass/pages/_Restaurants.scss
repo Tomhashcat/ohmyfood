@@ -107,8 +107,8 @@ img {
                 margin-left: 15px;
                 margin-top: 15px;
                 justify-content: space-between;
-
                 width: 85%;
+
 
                 .body-text {
                     width: 80%;
@@ -153,6 +153,7 @@ img {
                     }
 
                     .ball {
+
                         display: none;
                         white-space: nowrap;
                         width: 70px;
@@ -161,106 +162,91 @@ img {
                         margin-right: -2%;
                         margin-bottom: -15px;
                         border-radius: 0px 25px 25px 0px;
-
                         z-index: -1;
 
                         @media (min-width:1024px) {
-                            margin-right: -2%;
+                            margin-right: -4%;
                         }
-
-
                     }
                 }
             }
 
+            &:hover {
+                /* transform: scale(1.05);*/
+
+                @include shadow-hover;
+
+                .fa-check {
+                    display: flex;
+                    color: white;
+                    margin-top: 25px;
+                    margin-left: 20px;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 25px;
+                    background-color: $color-secondary;
+                    color: $color-frth;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                }
 
 
 
+                .valeur {
+                    display: flex;
+                    margin-top: -15px;
+                    margin-left: 61%;
+                    position: absolute;
+                    justify-content: space-between;
 
 
-            @media (min-width:375px) {
-                &:hover {
-                    /* transform: scale(1.05);*/
-
-                    box-shadow: $box-shadow;
-
-                    .fa-check {
-                        display: flex;
-                        color: white;
-                        margin-top: 25px;
-                        margin-left: 20px;
-                        width: 30px;
-                        height: 30px;
-                        border-radius: 25px;
-                        background-color: $color-secondary;
-                        color: $color-frth;
-                        justify-content: center;
-                        align-items: center;
-                        text-align: center;
+                    @media (min-width:1024px) {
+                        margin-left: 78%;
                     }
 
-
-
-                    .valeur {
-                        display: flex;
-                        margin-top: -15px;
-                        margin-left: 61%;
-                        position: absolute;
-                        justify-content: space-between;
+                    .ball {
                         transition: left;
-                        animation: checked 0.5s ease-in-out;
+                        animation-duration: 2s;
+                        transition: 2s;
+                        animation: checked 2s ease-in-out;
+                        display: block;
+                        z-index: 1;
 
-                        @media (min-width:1024px) {
-                            margin-left: 78%;
-                        }
-
-                        .ball {
-
-                            display: block;
-                            z-index: 1;
-                        }
-
-                        .prix {
+                    }
 
 
-                            height: 69px;
-                            margin-right: -13px;
-                            margin-top: -1px;
-                            text-align: center;
-                            align-items: center;
-                            padding-right: 20px;
-                            padding-left: 15px;
+
+                    .prix {
 
 
-                            @media (min-width:768px) {}
-                        }
+                        height: 69px;
+                        margin-right: -13px;
+                        margin-top: -1px;
+                        text-align: center;
+                        align-items: center;
+                        padding-right: 20px;
+                        padding-left: 15px;
+
+
+                        @media (min-width:768px) {}
                     }
                 }
+
+
             }
 
-            @keyframes checked {
-                0% {
-                    right: -5%;
-                }
 
-
-
-                100% {
-                    right: 0%
-                }
-            }
-
-            @keyframes checked2 {
-                0% {
-                    left: 1.5%;
-                }
-
-                100% {
-                    left: 2%
-                }
-            }
         }
     }
+
+
+
+
+
+
+
+
 
     .Plats {
         margin-top: 80px;
@@ -289,6 +275,19 @@ img {
 
     }
 
+    /*ANIMATION CHECKED*/
+    @keyframes checked {
+
+        0% {
+
+            right: -5%;
+        }
+
+        100% {
+            right: 0%;
+
+        }
+    }
 
     /*ANIMATION MAGIC*/
     @keyframes magic {

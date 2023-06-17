@@ -43,7 +43,8 @@ p {
     &:hover {
         /*transform: scale(1.1);*/
         background: $linear-background;
-        box-shadow: $box-shadow;
+        @include shadow-hover;
+        filter: brightness(120%);
     }
 }
 
@@ -156,9 +157,8 @@ p {
             margin-right: 15px;
         }
 
-        &:hover {
-            /*transform: scale(1.1);*/
-            box-shadow: $box-shadow;
+        &:hover{
+            @include shadow-hover;
         }
 
     }
@@ -206,23 +206,28 @@ p {
 
     .btn-new {
         @include btn-new;
-
-        @media (min-width:768px) {
-            margin-left: 40%;
+        margin-left: 61%;
+        @media (min-width:1024px) {
+            margin-left: 38%;
+        }
+        @media (min-width:1440px) {
+            margin-left: 27%;
         }
     }
 
     .restaurant-cards {
-        margin-left: 10px;
-
+       
+        @include flex-wrap;
+        justify-content: center;
         @media(min-width:1024px) {
-            @include flex-wrap;
+           
             justify-content: space-around;
         }
 
         @media (min-width:1440px) {
             width: 80%;
             justify-content: space-between;
+            margin-left: 10%;
         }
     }
 
@@ -249,7 +254,7 @@ p {
         &:hover {
             /*transform: scale(1.05);*/
 
-            box-shadow: $box-shadow;
+           @include shadow-hover;
         }
 
         @media(min-width:768px) {
