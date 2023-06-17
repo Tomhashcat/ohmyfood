@@ -140,6 +140,9 @@ img {
                 .valeur {
                     margin-right: -5%;
 
+
+
+
                     @media (min-width:1024px) {
                         margin-right: -10%;
                     }
@@ -163,6 +166,7 @@ img {
                         margin-bottom: -15px;
                         border-radius: 0px 25px 25px 0px;
                         z-index: -1;
+
 
                         @media (min-width:1024px) {
                             margin-right: -4%;
@@ -199,17 +203,16 @@ img {
                     margin-left: 61%;
                     position: absolute;
                     justify-content: space-between;
-
+                    animation: checked 0.8s ease-out;
 
                     @media (min-width:1024px) {
                         margin-left: 78%;
                     }
 
+
+
                     .ball {
-                        transition: left;
-                        animation-duration: 2s;
-                        transition: 2s;
-                        animation: checked 2s ease-in-out;
+
                         display: block;
                         z-index: 1;
 
@@ -229,7 +232,7 @@ img {
                         padding-left: 15px;
 
 
-                        @media (min-width:768px) {}
+                       
                     }
                 }
 
@@ -280,13 +283,15 @@ img {
 
         0% {
 
-            right: -5%;
+            right: 0%;
         }
+        
 
         100% {
-            right: 0%;
+            right: 10%;
 
         }
+        
     }
 
     /*ANIMATION MAGIC*/

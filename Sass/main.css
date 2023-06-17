@@ -806,6 +806,7 @@ img {
   margin-left: 61%;
   position: absolute;
   justify-content: space-between;
+  animation: checked 0.8s ease-out;
 }
 @media (min-width: 1024px) {
   .section .cards .card:hover .valeur {
@@ -813,10 +814,6 @@ img {
   }
 }
 .section .cards .card:hover .valeur .ball {
-  transition: left;
-  animation-duration: 2s;
-  transition: 2s;
-  animation: checked 2s ease-in-out;
   display: block;
   z-index: 1;
 }
@@ -867,10 +864,10 @@ img {
 }
 @keyframes checked {
   0% {
-    right: -5%;
+    right: 0%;
   }
   100% {
-    right: 0%;
+    right: 10%;
   }
 }
 @keyframes magic {
