@@ -815,6 +815,7 @@ img {
 @media (min-width: 1024px) {
   .section .cards .card:hover .valeur {
     margin-left: 78%;
+    animation: checked2 0.8s ease-out;
   }
 }
 .section .cards .card:hover .valeur .ball {
@@ -867,6 +868,14 @@ img {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
 @keyframes checked {
+  0% {
+    right: 0%;
+  }
+  100% {
+    right: 5%;
+  }
+}
+@keyframes checked2 {
   0% {
     right: 0%;
   }
