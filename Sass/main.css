@@ -17,9 +17,8 @@ body {
   display: none;
   margin-bottom: 120px;
   position: absolute;
-  font-size: 22px;
+  font-size: 24px;
   background: linear-gradient(193.33deg, #a577dc -11.44%, #f4aadf 123.93%);
-  overflow: hidden;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -30,15 +29,20 @@ body {
 }
 .heart-animation:hover .fa-solid {
   display: inline;
+  padding: 1px;
   animation: grow 0.3s;
   margin-top: 13px;
-  border-color: #9356DC;
+  margin-right: 1px;
+}
+.heart-animation:hover .fa-regular {
+  color: #9356DC;
 }
 .heart-animation .fa-regular {
   position: absolute;
   overflow: hidden;
   font-size: 22px;
   margin-top: 13px;
+  padding: 1px;
 }
 
 @keyframes grow {
