@@ -116,10 +116,6 @@ p {
             margin-left: 80px;
         }
 
-
-
-
-
         /*CERCLE BUTTONS FONCTIONNEMENT*/
         .cercle {
             display: flex;
@@ -157,7 +153,7 @@ p {
             margin-right: 15px;
         }
 
-        &:hover{
+        &:hover {
             @include shadow-hover;
         }
 
@@ -207,20 +203,23 @@ p {
     .btn-new {
         @include btn-new;
         margin-left: 61%;
+
         @media (min-width:1024px) {
             margin-left: 38%;
         }
+
         @media (min-width:1440px) {
             margin-left: 27%;
         }
     }
 
     .restaurant-cards {
-       
+
         @include flex-wrap;
         justify-content: center;
+
         @media(min-width:1024px) {
-           
+
             justify-content: space-around;
         }
 
@@ -254,7 +253,7 @@ p {
         &:hover {
             /*transform: scale(1.05);*/
 
-           @include shadow-hover;
+            @include shadow-hover;
         }
 
         @media(min-width:768px) {
@@ -306,7 +305,7 @@ p {
             margin: 10px;
             width: 80%;
             margin-top: 5px;
-            font-family:$p-font-family;
+            font-family: $p-font-family;
         }
     }
 }

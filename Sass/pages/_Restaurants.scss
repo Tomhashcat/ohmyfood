@@ -69,14 +69,12 @@ img {
 
     .cards {
         @include flex-wrap;
-        animation: magic 3s ease-in-out;
+        animation: magic 3s ease-in;
         animation-delay: 0s;
-
+       
         @media(min-width:768px) {
             flex-direction: column;
         }
-
-
 
         .card {
 
@@ -176,7 +174,7 @@ img {
             }
 
             &:hover {
-                /* transform: scale(1.05);*/
+                /*                      transform:         scale(1.05);*/
 
                 @include shadow-hover;
 
@@ -195,8 +193,6 @@ img {
                     text-align: center;
                 }
 
-
-
                 .valeur {
                     display: flex;
                     margin-top: -15px;
@@ -210,8 +206,6 @@ img {
                         animation: checked2 0.8s ease-out;
                     }
 
-
-
                     .ball {
 
                         display: block;
@@ -219,11 +213,7 @@ img {
 
                     }
 
-
-
                     .prix {
-
-
                         height: 69px;
                         margin-right: -13px;
                         margin-top: -1px;
@@ -231,26 +221,11 @@ img {
                         align-items: center;
                         padding-right: 20px;
                         padding-left: 15px;
-
-
-                       
                     }
                 }
-
-
             }
-
-
         }
     }
-
-
-
-
-
-
-
-
 
     .Plats {
         margin-top: 80px;
@@ -279,27 +254,28 @@ img {
 
     }
 
-    /*ANIMATION CHECKED*/
+    /*ANIMATION             CHECKED*/
     @keyframes checked {
 
         0% {
 
             right: 0%;
         }
-        
+
 
         100% {
             right: 5%;
-
         }
-        
+
+
     }
-    @keyframes checked2{
+
+    @keyframes checked2 {
         0% {
 
             right: 0%;
         }
-        
+
 
         100% {
             right: 10%;
@@ -307,22 +283,22 @@ img {
         }
     }
 
-    /*ANIMATION MAGIC*/
+    /*ANIMATION             MAGIC*/
     @keyframes magic {
         0% {
-            visibility: visible;
+           
             transform: scale(0);
-            rotate: (360deg);
+           
         }
 
         50% {
-            visibility: visible;
-            transform: scale(0.5);
+           
+            transform: scale(1);
         }
 
         100% {
-            visibility: visible;
-            transform: scale(1);
+          
+            transform: scale(0);
             display: block;
         }
     }

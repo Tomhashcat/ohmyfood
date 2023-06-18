@@ -1,4 +1,7 @@
-/*FONTS*/ /*BUTTON*/
+/*FONTS*/
+/*COLORS*/
+/*RADIUS*/
+/*BUTTON*/
 /*BTN-NEW*/
 /*DISPLAY*/
 body {
@@ -650,8 +653,8 @@ img {
   position: relative;
   border-radius: 25px;
   padding-bottom: 70px;
-  /*ANIMATION CHECKED*/
-  /*ANIMATION MAGIC*/
+  /*ANIMATION             CHECKED*/
+  /*ANIMATION             MAGIC*/
 }
 .section .green-title {
   display: flex;
@@ -690,7 +693,7 @@ img {
 .section .cards {
   display: flex;
   flex-wrap: wrap;
-  animation: magic 3s ease-in-out;
+  animation: magic 3s ease-in;
   animation-delay: 0s;
 }
 @media (min-width: 768px) {
@@ -787,7 +790,7 @@ img {
   }
 }
 .section .cards .card:hover {
-  /* transform: scale(1.05);*/
+  /*                      transform:         scale(1.05);*/
   box-shadow: 5px 7px 15px gray;
 }
 .section .cards .card:hover .fa-check {
@@ -885,17 +888,13 @@ img {
 }
 @keyframes magic {
   0% {
-    visibility: visible;
     transform: scale(0);
-    rotate: 360deg;
   }
   50% {
-    visibility: visible;
-    transform: scale(0.5);
+    transform: scale(1);
   }
   100% {
-    visibility: visible;
-    transform: scale(1);
+    transform: scale(0);
     display: block;
   }
 }/*# sourceMappingURL=main.css.map */
