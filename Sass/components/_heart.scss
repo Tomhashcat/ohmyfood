@@ -1,8 +1,5 @@
 /*COEUR*/
 
-
-
-
 .heart-animation {
   display: flex;
   position: relative;
@@ -38,7 +35,7 @@
     }
 
 .fa-regular{
-  color: #9356DC;
+  color:$color-primary;
 }
 
   }
@@ -49,15 +46,13 @@
     position: absolute;
     overflow: hidden;
     font-size: 22px;
-    margin-top: 13px;
+    margin-top: 14px;
     padding: 1px;
 
   }
 
 
 }
-
-
 
 @keyframes grow {
   0% {
@@ -75,3 +70,7 @@
 
   }
 }
+
+
+
+

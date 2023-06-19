@@ -227,10 +227,7 @@ p {
             width: 80%;
             justify-content: space-between;
             margin-left: 10%;
-        }
-    }
-
-    .card {
+        }.card {
 
         width: 330px;
         height: 251px;
@@ -295,7 +292,7 @@ p {
             margin-top: 15px;
 
             .fa-solid {
-                margin-left: 0px;
+                margin-left: -1px;
             }
         }
 
@@ -308,4 +305,7 @@ p {
             font-family: $p-font-family;
         }
     }
+    }
+
+    
 }

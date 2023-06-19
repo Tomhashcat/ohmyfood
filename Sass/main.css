@@ -44,7 +44,7 @@ body {
   position: absolute;
   overflow: hidden;
   font-size: 22px;
-  margin-top: 13px;
+  margin-top: 14px;
   padding: 1px;
 }
 
@@ -573,7 +573,7 @@ p {
     margin-left: 10%;
   }
 }
-.restaurant .card {
+.restaurant .restaurant-cards .card {
   width: 330px;
   height: 251px;
   border-radius: 15px;
@@ -581,12 +581,12 @@ p {
   margin-top: 15px;
 }
 @media (min-width: 1024px) {
-  .restaurant .card {
+  .restaurant .restaurant-cards .card {
     margin-left: 0px;
   }
 }
 @media (min-witdh: 1440px) {
-  .restaurant .card {
+  .restaurant .restaurant-cards .card {
     width: 490px;
     height: 251px;
     border-radius: 15px;
@@ -594,12 +594,12 @@ p {
     margin-top: 15px;
   }
 }
-.restaurant .card:hover {
+.restaurant .restaurant-cards .card:hover {
   /*transform: scale(1.05);*/
   box-shadow: 5px 7px 15px gray;
 }
 @media (min-width: 768px) {
-  .restaurant .card {
+  .restaurant .restaurant-cards .card {
     width: 490px;
     height: 251px;
     border-radius: 15px;
@@ -607,11 +607,11 @@ p {
     margin-top: 15px;
   }
 }
-.restaurant .card a {
+.restaurant .restaurant-cards .card a {
   text-decoration: none;
   color: black;
 }
-.restaurant .card img {
+.restaurant .restaurant-cards .card img {
   width: 330px;
   height: 150px;
   -o-object-fit: cover;
@@ -619,27 +619,27 @@ p {
   border-radius: 15px 15px 0px 0px;
 }
 @media (min-width: 768px) {
-  .restaurant .card img {
+  .restaurant .restaurant-cards .card img {
     width: 490px;
     height: 150px;
   }
 }
-.restaurant .card .card-title {
+.restaurant .restaurant-cards .card .card-title {
   margin-top: 5px;
   margin-bottom: 0;
   margin-left: 12px;
   font-size: 18px;
   font-weight: bold;
 }
-.restaurant .card .card-body {
+.restaurant .restaurant-cards .card .card-body {
   display: flex;
   justify-content: space-between;
   margin-top: 15px;
 }
-.restaurant .card .card-body .fa-solid {
-  margin-left: 0px;
+.restaurant .restaurant-cards .card .card-body .fa-solid {
+  margin-left: -1px;
 }
-.restaurant .card p {
+.restaurant .restaurant-cards .card p {
   display: flex;
   flex-wrap: wrap;
   text-align: center;
