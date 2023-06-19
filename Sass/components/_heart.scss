@@ -31,12 +31,13 @@
       animation: grow 0.3s;
       margin-top: 13px;
       margin-right: 1px;
-     
+
     }
 
-.fa-regular{
-  color:$color-primary;
-}
+    .fa-regular {
+      color: $color-primary;
+      margin-left: 1px;
+    }
 
   }
 
@@ -70,7 +71,3 @@
 
   }
 }
-
-
-
-

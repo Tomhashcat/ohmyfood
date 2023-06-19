@@ -39,6 +39,7 @@ body {
 }
 .heart-animation:hover .fa-regular {
   color: #9356DC;
+  margin-left: 1px;
 }
 .heart-animation .fa-regular {
   position: absolute;
@@ -399,13 +400,14 @@ p {
 .Titre-Fonctionnement {
   text-align: left;
   margin-left: auto;
-  width: 98%;
+  width: 95%;
   margin-top: 40px;
 }
 @media (min-width: 1024px) {
   .Titre-Fonctionnement {
     margin-top: 80px;
     font-size: 30px;
+    margin-left: 15px;
   }
 }
 @media (min-width: 1440px) {
@@ -495,7 +497,7 @@ p {
   box-shadow: 5px 7px 15px gray;
 }
 .Titre-Restaurant {
-  margin-left: 11%;
+  margin-left: 20px;
   margin-top: 100px;
   position: absolute;
 }
@@ -558,7 +560,6 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-left: 4%;
 }
 @media (min-width: 1024px) {
   .restaurant .restaurant-cards {
@@ -664,7 +665,7 @@ h1 {
 }
 
 .heart-animation {
-  margin-left: 15px;
+  margin-left: 12px;
 }
 
 img {

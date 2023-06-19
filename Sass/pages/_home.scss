@@ -53,12 +53,13 @@ p {
 .Titre-Fonctionnement {
     text-align: left;
     margin-left:auto;
-    width: 98%;
+    width: 95%;
     margin-top: 40px;
 
     @media (min-width:1024px) {
         margin-top: 80px;
         font-size: 30px;
+        margin-left:15px;
 
     }
 
@@ -167,7 +168,7 @@ p {
 .Titre-Restaurant {
 
 
-    margin-left: 11%;
+    margin-left: 20px;
     margin-top: 100px;
     position: absolute;
 
@@ -216,7 +217,7 @@ p {
 
         @include flex-wrap;
         justify-content: center;
-        margin-left: 4%;
+       
 
         @media(min-width:1024px) {
             justify-content: space-around;
