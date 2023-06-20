@@ -32,13 +32,10 @@ img {
 
 
     .green-title {
-        display: flex;
-        flex-direction: column;
-        margin-left: 22%;
+       
 
-        @media (min-width:$breakpoint-tablette) {
-            margin-left: 0;
-        }
+        
+
 
         .titre-EPD {
             font-weight: 300;
@@ -48,7 +45,7 @@ img {
         }
 
         .green {
-            display: flex;
+           
             width: 55px;
             height: 4px;
             background: $color-frth;
@@ -61,7 +58,7 @@ img {
 
 
     @media (min-width:$breakpoint-tablette) {
-        @include flex-wrap;
+
         flex-direction: column;
         align-items: center;
         margin-left: 100px;
@@ -213,7 +210,7 @@ img {
                     animation: checked 0.8s ease-out;
 
                     @media (min-width:$breakpoint-desktop) {
-                       
+
                         animation: checked2 0.8s ease-out;
                     }
 
