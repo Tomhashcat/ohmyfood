@@ -6,9 +6,11 @@ footer {
     @include flex-wrap;
     flex-direction: column;
     padding-bottom: 45px;
+    position: relative;
 
-    @media (min-width:768px) {
+    @media (min-width:$breakpoint-tablette) {
         flex-direction: row-reverse;
+
 
 
     }
@@ -21,17 +23,20 @@ footer {
         width: 200px;
         align-self: flex-start;
 
-        @media (min-width:768px) {
-            margin-left: 85px;
+        @media (min-width:$breakpoint-tablette) {
+            
             margin-top: 48px;
+            position: absolute;
 
         }
     }
 
     .footer-links {
-        @media (min-width:768px) {
+        @media (min-width:$breakpoint-tablette) {
             display: flex;
+            margin-right: 27%;
         }
+       
     }
 
     li {
@@ -40,7 +45,7 @@ footer {
         margin-left: 25px;
         cursor: pointer;
 
-        @media (min-width:768px) {
+        @media (min-width:$breakpoint-tablette) {
             margin-left: 5px;
         }
 
@@ -48,8 +53,8 @@ footer {
     }
 
     .mentions {
-        @media (min-width:768px) {
-            margin-left: 55px;
+        @media (min-width:$breakpoint-tablette) {
+            margin-left: 35px;
         }
     }
 
@@ -61,7 +66,7 @@ footer {
         line-height: 25px;
         margin-bottom: 0px;
 
-        @media(min-width:768px) {
+        @media(min-width:$breakpoint-tablette) {
             display: flex;
             flex-direction: row;
             align-self: flex-end;
@@ -85,7 +90,7 @@ footer {
         margin-left: 0;
         margin-right: 5px;
 
-        @media(min-width:768px) {
+        @media(min-width:$breakpoint-tablette) {
             margin-top: 0;
             margin-right: 2px;
         }
@@ -96,7 +101,7 @@ footer {
         text-decoration: none;
         margin-top: -10px;
 
-        @media (min-width:768px) {
+        @media (min-width:$breakpoint-tablette) {
             margin-top: 53px;
             margin-left: 0px;
 

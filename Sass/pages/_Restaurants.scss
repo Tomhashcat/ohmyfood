@@ -5,7 +5,7 @@ a {
 h1 {
     font-family: $h1-font-family-title;
 
-    @media (min-width:1440px) {
+    @media (min-width:$breakpoint-desktop) {
         text-align: center;
     }
 }
@@ -22,21 +22,29 @@ img {
 }
 
 .section {
+    display: flex;
+    flex-direction: column;
     background-color: $color-secondary;
     margin-top: -60px;
     position: relative;
     border-radius: 25px;
     padding-bottom: 70px;
 
+
     .green-title {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        margin-left: 22%;
+
+        @media (min-width:$breakpoint-tablette) {
+            margin-left: 0;
+        }
 
         .titre-EPD {
             font-weight: 300;
             margin-left: 10px;
             margin-bottom: 5px;
+
         }
 
         .green {
@@ -45,14 +53,14 @@ img {
             height: 4px;
             background: $color-frth;
             margin-bottom: 20px;
-            margin-left: 10px;
+            margin-left: 1%;
 
         }
     }
 
 
 
-    @media (min-width:1024px) {
+    @media (min-width:$breakpoint-tablette) {
         @include flex-wrap;
         flex-direction: column;
         align-items: center;
@@ -72,8 +80,9 @@ img {
         @include flex-wrap;
         animation: magic 3s ease-in;
         animation-delay: 0s;
-       
-        @media(min-width:768px) {
+        justify-content: center;
+
+        @media(min-width:$breakpoint-tablette ) {
             flex-direction: column;
         }
 
@@ -81,7 +90,7 @@ img {
 
             @include flex-wrap;
             flex-direction: row;
-            margin-left: 10px;
+
             margin-bottom: 20px;
             width: 350px;
             height: 80px;
@@ -95,7 +104,7 @@ img {
             transform: scale(1);
             overflow: hidden;
 
-            @media (min-width:1024px) {
+            @media (min-width:$breakpoint-desktop) {
                 width: 634px;
             }
 
@@ -107,7 +116,7 @@ img {
                 margin-top: 15px;
                 justify-content: space-between;
                 width: 85%;
-
+                position: relative;
 
                 .body-text {
                     width: 80%;
@@ -127,7 +136,7 @@ img {
                         overflow: hidden;
                         text-overflow: ellipsis;
 
-                        @media (min-width:1024px) {
+                        @media (min-width:$breakpoint-desktop) {
                             display: flex;
                             align-self: start;
                             padding-left: 0;
@@ -137,12 +146,12 @@ img {
                 }
 
                 .valeur {
-                    margin-right: -5%;
+                    margin-right: -6%;
 
 
 
 
-                    @media (min-width:1024px) {
+                    @media (min-width:$breakpoint-desktop) {
                         margin-right: -10%;
                     }
 
@@ -167,7 +176,7 @@ img {
                         z-index: -1;
 
 
-                        @media (min-width:1024px) {
+                        @media (min-width:$breakpoint-desktop) {
                             margin-right: -4%;
                         }
                     }
@@ -175,7 +184,7 @@ img {
             }
 
             &:hover {
-                /*                      transform:         scale(1.05);*/
+                //transform:         scale(1.05);
 
                 @include shadow-hover;
 
@@ -197,12 +206,12 @@ img {
                 .valeur {
                     display: flex;
                     margin-top: -15px;
-                    margin-left: 61%;
+                   right: -20px;
                     position: absolute;
                     justify-content: space-between;
                     animation: checked 0.8s ease-out;
 
-                    @media (min-width:1024px) {
+                    @media (min-width:$breakpoint-desktop) {
                         margin-left: 78%;
                         animation: checked2 0.8s ease-out;
                     }
@@ -287,18 +296,18 @@ img {
     /*ANIMATION             MAGIC*/
     @keyframes magic {
         0% {
-           
+
             transform: scale(0);
-           
+
         }
 
         50% {
-           
+
             transform: scale(1);
         }
 
         100% {
-          
+
             transform: scale(0);
             display: block;
         }

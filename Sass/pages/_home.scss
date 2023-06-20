@@ -1,6 +1,6 @@
 .reservation {
-    padding-top: 40px;
-    padding-bottom: 8%;
+    padding-top: 1px;
+    padding-bottom: 4%;
     background-color: $color-secondary;
 
     .Titre-Reservation {
@@ -8,11 +8,11 @@
 
     }
 
-    @media (min-width:1024px) {
+    @media (min-width:$breakpoint-tablette) {
         font-size: 35px;
     }
 
-    @media(min-width:1440px) {
+    @media($breakpoint-desktop) {
         font-size: 40px;
     }
 
@@ -26,7 +26,7 @@ p {
     margin-top: 5px;
     font-family: $p-font-family;
 
-    @media(min-width:768px) {
+    @media(min-width:$breakpoint-tablette) {
         @include block-center;
         font-size: 17px;
         margin-top: 10px;
@@ -37,7 +37,7 @@ p {
     @include button-base;
     @include button-purple;
     cursor: pointer;
-    margin-top: 100px;
+    margin-top: 33px;
 
     /*transform: scale(1);*/
     &:hover {
@@ -51,46 +51,55 @@ p {
 
 
 .Titre-Fonctionnement {
-    text-align: left;
-    margin-left:auto;
-    width: 95%;
-    margin-top: 40px;
 
-    @media (min-width:1024px) {
+    text-align: left;
+    margin-left: 2%;
+    width: 71%;
+    margin-top: 40px;
+    padding-left: 1%;
+
+    @media (min-width:$breakpoint-tablette) {
         margin-top: 80px;
         font-size: 30px;
-        margin-left:15px;
+margin-left: 20%;
 
     }
 
-    @media (min-width:1440px) {
-        text-align: left;
-        margin-left: 140px;
+
+    @media (min-width:$breakpoint-desktop) {
+     margin-left: 5%;
     }
 }
 
 .Fonctionnement {
     width: 90%;
-    display: inline-block;
+    display: inline-flex;
+    flex-wrap: wrap;
     text-align: center;
-    margin-left: 8%;
+    margin-left: 6%;
     margin-top: 0px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-    @media (min-width:1024px) {
-        display: inline-flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 98%;
-        align-items: center;
-        margin-left: 15px;
+    @media (min-width:$breakpoint-tablette) {
+        display: inline-block;
+        width: 100%;
+        margin-left: -7px;
     }
 
 
-    @media (min-width:1440px) {
-        display: inline;
-        flex-wrap: wrap;
-        margin-left: 80px;
-        justify-content: space-between;
+
+
+
+    @media (min-width:$breakpoint-desktop) {
+
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 90%;
+        margin-left: 5%;
 
     }
 
@@ -106,16 +115,16 @@ p {
         margin-top: 30px;
         cursor: pointer;
 
-        @media (min-width:1024px) {
+        @media (min-width:$breakpoint-tablette) {
             width: 310px;
             margin-left: 15px;
         }
 
-        @media(min-width:1440px) {
+        @media(min-width:$breakpoint-desktop) {
             width: 323px;
             display: inline;
             justify-content: space-between;
-            margin-left: 80px;
+            margin-left: 20px;
         }
 
         /*CERCLE BUTTONS FONCTIONNEMENT*/
@@ -159,7 +168,7 @@ p {
 
     }
 
-    @media(min-width:768px) {}
+
 
 }
 
@@ -167,20 +176,21 @@ p {
 
 .Titre-Restaurant {
 
-
-    margin-left: 20px;
+    text-align: left;
+    margin-left: 5%;
     margin-top: 100px;
     position: absolute;
+    z-index: 1;
 
-    @media (min-width:1024px) {
+    @media (min-width:$breakpoint-tablette) {
         margin-top: 80px;
-        margin-left: 15px;
+        margin-left: 21%;
         margin-right: 0;
         font-size: 30px;
     }
 
-    @media (min-width:1440px) {
-        margin-left: 140px;
+    @media (min-width:$breakpoint-desktop) {
+        margin-left: 5%;
     }
 }
 
@@ -191,122 +201,131 @@ p {
     margin-top: 40px;
     padding-top: 100px;
     padding-bottom: 20px;
+    justify-content: center;
+    position: relative;
+    
 
-    @media (min-width:1024px) {
+    @media (min-width:$breakpoint-tablette) {
         flex-direction: row;
     }
 
-    @media (min-width:1440px) {
-        padding-left: 0px;
+    @media (min-width:$breakpoint-desktop) {
+      
     }
 
     .btn-new {
         @include btn-new;
-        margin-left: 61%;
+        //margin-left: 61%;
 
-        @media (min-width:1024px) {
-            margin-left: 38%;
-        }
 
-        @media (min-width:1440px) {
-            margin-left: 27%;
-        }
     }
 
     .restaurant-cards {
 
-        @include flex-wrap;
-        justify-content: center;
-       
 
-        @media(min-width:1024px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+
+
+
+        @media(min-width:$breakpoint-tablette) {
             justify-content: space-around;
             margin-left: 0;
         }
 
-        @media (min-width:1440px) {
-            width: 80%;
-            justify-content: space-between;
-            margin-left: 10%;
-        }.card {
-
-        width: 330px;
-        height: 251px;
-        border-radius: $border-radius;
-        box-shadow: $box-shadow;
-        margin-top: 15px;
-
-        @media (min-width:1024px) {
-            margin-left: 0px;
+        @media (min-width:$breakpoint-desktop) {
+            width: 100%;
+            justify-content: space-around;
+            margin-left: 1%;
+            flex-direction: row;
         }
 
-        @media(min-witdh:1440px) {
-            width: 490px;
-            height: 251px;
-            border-radius: $border-radius;
-            box-shadow: $box-shadow;
-            margin-top: 15px;
-        }
+        .card {
 
-        &:hover {
-            /*transform: scale(1.05);*/
-
-            @include shadow-hover;
-        }
-
-        @media(min-width:768px) {
-            width: 490px;
-            height: 251px;
-            border-radius: $border-radius;
-            box-shadow: $box-shadow;
-            margin-top: 15px;
-        }
-
-        a {
-            text-decoration: none;
-            color: black;
-
-        }
-
-        img {
             width: 330px;
-            height: 150px;
-            @include img-cover;
-
-            @media(min-width:768px) {
-                width: 490px;
-                height: 150px;
-            }
-        }
-
-        .card-title {
-            margin-top: 5px;
-            margin-bottom: 0;
-            margin-left: 12px;
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        .card-body {
-            display: flex;
-            justify-content: space-between;
+            height: 251px;
+            border-radius: $border-radius;
+            box-shadow: $box-shadow;
             margin-top: 15px;
 
-            .fa-solid {
-                margin-left: -1px;
+            @media(min-width:$breakpoint-tablette) {
+                width: 490px;
+                height: 251px;
+                border-radius: $border-radius;
+                box-shadow: $box-shadow;
+                margin-top: 15px;
+                margin-left: 0px;
+            }
+
+
+            @media(min-width:$breakpoint-desktop) {
+                width: 490px;
+                height: 251px;
+                border-radius: $border-radius;
+                box-shadow: $box-shadow;
+                margin-top: 15px;
+            }
+
+            &:hover {
+                /*transform: scale(1.05);*/
+
+                @include shadow-hover;
+            }
+
+
+
+            a {
+                text-decoration: none;
+                color: black;
+
+            }
+
+            .img-card {
+                position: relative;
+            }
+
+            img {
+
+                width: 330px;
+                height: 150px;
+                @include img-cover;
+
+                @media(min-width:$breakpoint-tablette) {
+                    width: 490px;
+                    height: 150px;
+                }
+            }
+
+            .card-title {
+                margin-top: 5px;
+                margin-bottom: 0;
+                margin-left: 12px;
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            .card-body {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 15px;
+
+                .fa-solid {
+                    margin-left: -1px;
+                }
+            }
+
+            p {
+                @include flex-wrap;
+                text-align: center;
+                margin: 10px;
+                width: 80%;
+                margin-top: 5px;
+                font-family: $p-font-family;
             }
         }
-
-        p {
-            @include flex-wrap;
-            text-align: center;
-            margin: 10px;
-            width: 80%;
-            margin-top: 5px;
-            font-family: $p-font-family;
-        }
-    }
     }
 
-    
+
 }
