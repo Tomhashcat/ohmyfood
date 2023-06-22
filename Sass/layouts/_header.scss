@@ -1,19 +1,17 @@
 header {
 
     width: 100%;
-
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+position: relative;
     .fa-arrow-left {
         cursor: pointer;
         font-size: 22px;
-        margin-left: -80px;
-
-        @media (min-width:$breakpoint-tablette) {
-            margin-left: -400px;
-        }
-
-        @media (min-width:$breakpoint-desktop) {
-            margin-left: -600px;
-        }
+        margin-left: 4%;
+        margin-top: 11px;
+position: absolute;
+       
     }
 
     .logo {

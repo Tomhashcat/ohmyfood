@@ -119,7 +119,9 @@ img {
                     @include flex-wrap;
                     width: 314px;
 
-                    @media (min-width:$breakpoint-tablette) {}
+                    @media (min-width:$breakpoint-desktop) {
+                        width: 414px;
+                    }
 
                     h3 {
                         margin-top: 5px;
@@ -137,11 +139,7 @@ img {
                         text-overflow: ellipsis;
                         text-align: left;
 
-                        @media (min-width:$breakpoint-tablette) {
-                            display: flex;
-
-                        }
-
+                       
                         @media (min-width:$breakpoint-desktop) {
 
                             align-self: start;

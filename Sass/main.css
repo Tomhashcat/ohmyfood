@@ -178,23 +178,19 @@ header {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   font-family: "Shrikhand", sans-serif;
 }
 header .fa-arrow-left {
   cursor: pointer;
   font-size: 22px;
-  margin-left: -80px;
-}
-@media (min-width: 768px) {
-  header .fa-arrow-left {
-    margin-left: -400px;
-  }
-}
-@media (min-width: 1024px) {
-  header .fa-arrow-left {
-    margin-left: -600px;
-  }
+  margin-left: 4%;
+  margin-top: 11px;
+  position: absolute;
 }
 header .logo {
   text-align: center;
@@ -747,6 +743,11 @@ img {
   flex-wrap: wrap;
   width: 314px;
 }
+@media (min-width: 1024px) {
+  .section .cards .card .card-body .body-text {
+    width: 414px;
+  }
+}
 .section .cards .card .card-body .body-text h3 {
   margin-top: 5px;
   margin-bottom: 0;
@@ -761,11 +762,6 @@ img {
   overflow: hidden;
   text-overflow: ellipsis;
   text-align: left;
-}
-@media (min-width: 768px) {
-  .section .cards .card .card-body .body-text p {
-    display: flex;
-  }
 }
 @media (min-width: 1024px) {
   .section .cards .card .card-body .body-text p {
