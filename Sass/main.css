@@ -844,12 +844,12 @@ img {
   right: -37px;
   position: absolute;
   justify-content: space-between;
-  animation: checked 0.8s ease-out;
+  animation: checked 0.8s cubic-bezier(0, 0, 0.51, 0.55);
 }
 @media (min-width: 768px) {
   .section .cards .card:hover .card-body .valeur {
     margin-right: 0;
-    animation: checked2 0.8s ease-out;
+    animation: checked 0.8s ease-out;
   }
 }
 @media (min-width: 1024px) {
@@ -907,14 +907,6 @@ img {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
 @keyframes checked {
-  0% {
-    right: -20%;
-  }
-  100% {
-    right: -12%;
-  }
-}
-@keyframes checked2 {
   0% {
     right: -20%;
   }

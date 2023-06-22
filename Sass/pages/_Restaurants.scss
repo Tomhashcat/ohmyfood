@@ -231,11 +231,11 @@ img {
                         right:-37px;
                         position: absolute;
                         justify-content: space-between;
-                        animation: checked 0.8s ease-out;
+                        animation: checked 0.8s cubic-bezier(0, 0, 0.51, 0.55);
 
                         @media (min-width:$breakpoint-tablette) {
                             margin-right: 0;
-                            animation: checked2 0.8s ease-out;
+                            animation: checked 0.8s ease-out;
                         }
                         @media (min-width: $breakpoint-desktop ) {
                             margin-right: -7%;
@@ -306,19 +306,7 @@ img {
 
     }
 
-    @keyframes checked2 {
-        0% {
-
-            right: -20%;
-        }
-
-
-        100% {
-            right:-12%;
-
-        }
-    }
-
+   
     /*ANIMATION             MAGIC*/
     @keyframes magic {
         0% {
