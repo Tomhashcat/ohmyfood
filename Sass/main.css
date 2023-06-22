@@ -745,7 +745,9 @@ img {
   position: relative;
 }
 .section .cards .card .card-body .body-text {
-  width: 67%;
+  display: flex;
+  flex-wrap: wrap;
+  width: 314px;
 }
 .section .cards .card .card-body .body-text h3 {
   margin-top: 5px;
@@ -756,25 +758,30 @@ img {
 }
 .section .cards .card .card-body .body-text p {
   margin-top: 5px;
-  margin-right: 200px;
+  margin-right: 20%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .section .cards .card .card-body .body-text p {
     display: flex;
+  }
+}
+@media (min-width: 1024px) {
+  .section .cards .card .card-body .body-text p {
     align-self: start;
     padding-left: 0;
-    margin-right: 250px;
+    margin-left: 0;
   }
 }
 .section .cards .card .card-body .valeur {
-  margin-right: -13%;
+  position: absolute;
+  right: -10%;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .section .cards .card .card-body .valeur {
-    margin-right: -15%;
+    margin-right: 0;
   }
 }
 .section .cards .card .card-body .valeur .prix {
@@ -804,7 +811,20 @@ img {
 .section .cards .card:hover {
   box-shadow: 5px 7px 15px gray;
 }
-.section .cards .card:hover .fa-check {
+.section .cards .card:hover .card-body .body-text {
+  width: 221px;
+}
+@media (min-width: 768px) {
+  .section .cards .card:hover .card-body .body-text {
+    width: 213px;
+  }
+}
+@media (min-width: 1024px) {
+  .section .cards .card:hover .card-body .body-text {
+    width: 100%;
+  }
+}
+.section .cards .card:hover .card-body .fa-check {
   display: flex;
   color: white;
   margin-top: 25px;
@@ -818,24 +838,30 @@ img {
   align-items: center;
   text-align: center;
 }
-.section .cards .card:hover .valeur {
+.section .cards .card:hover .card-body .valeur {
   display: flex;
   margin-top: -15px;
-  right: 2px;
+  right: -37px;
   position: absolute;
   justify-content: space-between;
   animation: checked 0.8s ease-out;
 }
-@media (min-width: 1024px) {
-  .section .cards .card:hover .valeur {
+@media (min-width: 768px) {
+  .section .cards .card:hover .card-body .valeur {
+    margin-right: 0;
     animation: checked2 0.8s ease-out;
   }
 }
-.section .cards .card:hover .valeur .ball {
+@media (min-width: 1024px) {
+  .section .cards .card:hover .card-body .valeur {
+    margin-right: -7%;
+  }
+}
+.section .cards .card:hover .card-body .valeur .ball {
   display: block;
   z-index: 1;
 }
-.section .cards .card:hover .valeur .prix {
+.section .cards .card:hover .card-body .valeur .prix {
   height: 69px;
   margin-right: -13px;
   margin-top: 21px;
@@ -882,18 +908,18 @@ img {
 }
 @keyframes checked {
   0% {
-    right: -10%;
+    right: -20%;
   }
   100% {
-    right: 0%;
+    right: -12%;
   }
 }
 @keyframes checked2 {
   0% {
-    right: -10%;
+    right: -20%;
   }
   100% {
-    right: 0%;
+    right: -12%;
   }
 }
 @keyframes magic {

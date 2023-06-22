@@ -32,9 +32,9 @@ img {
 
 
     .green-title {
-       
 
-        
+
+
 
 
         .titre-EPD {
@@ -45,7 +45,7 @@ img {
         }
 
         .green {
-           
+
             width: 55px;
             height: 4px;
             background: $color-frth;
@@ -116,7 +116,10 @@ img {
                 position: relative;
 
                 .body-text {
-                    width: 67%;
+                    @include flex-wrap;
+                    width: 314px;
+
+                    @media (min-width:$breakpoint-tablette) {}
 
                     h3 {
                         margin-top: 5px;
@@ -128,28 +131,33 @@ img {
 
                     p {
                         margin-top: 5px;
-                        margin-right: 200px;
+                        margin-right: 20%;
                         white-space: nowrap;
                         overflow: hidden;
                         text-overflow: ellipsis;
 
-                        @media (min-width:$breakpoint-desktop) {
+                        @media (min-width:$breakpoint-tablette) {
                             display: flex;
+
+                        }
+
+                        @media (min-width:$breakpoint-desktop) {
+
                             align-self: start;
                             padding-left: 0;
-                            margin-right: 250px;
+                            margin-left: 0;
                         }
                     }
                 }
 
                 .valeur {
-                    margin-right: -13%;
 
 
+                    position: absolute;
+                   right: -10%;
 
-
-                    @media (min-width:$breakpoint-desktop) {
-                        margin-right: -15%;
+                    @media (min-width:$breakpoint-tablette) {
+                        margin-right: 0;
                     }
 
                     .prix {
@@ -186,49 +194,69 @@ img {
 
                 @include shadow-hover;
 
-                .fa-check {
-                    display: flex;
-                    color: white;
-                    margin-top: 25px;
-                    margin-left: 20px;
-                    width: 30px;
-                    height: 30px;
-                    border-radius: 25px;
-                    background-color: $color-secondary;
-                    color: $color-frth;
-                    justify-content: center;
-                    align-items: center;
-                    text-align: center;
-                }
+                .card-body {
+                    @media (min-width:$breakpoint-desktop) {}
 
-                .valeur {
-                    display: flex;
-                    margin-top: -15px;
-                    right: 2px;
-                    position: absolute;
-                    justify-content: space-between;
-                    animation: checked 0.8s ease-out;
+                    .body-text {
+                        width: 221px;
 
-                    @media (min-width:$breakpoint-desktop) {
+                        @media (min-width: $breakpoint-tablette) {
+                            width: 213px;
 
-                        animation: checked2 0.8s ease-out;
+
+                        }
+                        @media (min-width:$breakpoint-desktop) {
+                            width:100%;
+                        }
                     }
 
-                    .ball {
-
-                        display: block;
-                        z-index: 1;
-
-                    }
-
-                    .prix {
-                        height: 69px;
-                        margin-right: -13px;
-                        margin-top: 21px;
-                        text-align: center;
+                    .fa-check {
+                        display: flex;
+                        color: white;
+                        margin-top: 25px;
+                        margin-left: 20px;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 25px;
+                        background-color: $color-secondary;
+                        color: $color-frth;
+                        justify-content: center;
                         align-items: center;
-                        padding-right: 20px;
-                        padding-left: 15px;
+                        text-align: center;
+                    }
+
+                    .valeur {
+                        display: flex;
+                        margin-top: -15px;
+                        right:-37px;
+                        position: absolute;
+                        justify-content: space-between;
+                        animation: checked 0.8s ease-out;
+
+                        @media (min-width:$breakpoint-tablette) {
+                            margin-right: 0;
+                            animation: checked2 0.8s ease-out;
+                        }
+                        @media (min-width: $breakpoint-desktop ) {
+                            margin-right: -7%;
+                        }
+
+                        .ball {
+
+                            display: block;
+                            z-index: 1;
+
+                        }
+
+                        .prix {
+                            height: 69px;
+                            margin-right: -13px;
+                            margin-top: 21px;
+                            text-align: center;
+                            align-items: center;
+                            padding-right: 20px;
+                            padding-left: 15px;
+                        }
                     }
                 }
             }
@@ -267,12 +295,12 @@ img {
 
         0% {
 
-            right: -10%;
+            right: -20%;
         }
 
 
         100% {
-            right: 0%;
+            right: -12%;
         }
 
 
@@ -281,12 +309,12 @@ img {
     @keyframes checked2 {
         0% {
 
-            right: -10%;
+            right: -20%;
         }
 
 
         100% {
-            right: 0%;
+            right:-12%;
 
         }
     }
