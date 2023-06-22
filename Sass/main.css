@@ -660,17 +660,21 @@ img {
 .section {
   display: flex;
   flex-direction: column;
+  align-items: center;
   background-color: #F6F6F6;
   margin-top: -60px;
   position: relative;
   border-radius: 25px;
   padding-bottom: 70px;
+  width: 100%;
   /*ANIMATION             CHECKED*/
   /*ANIMATION             MAGIC*/
 }
+.section .green-title {
+  margin-left: 10px;
+}
 .section .green-title .titre-EPD {
   font-weight: 300;
-  margin-left: 10px;
   margin-bottom: 5px;
 }
 .section .green-title .green {
@@ -678,12 +682,9 @@ img {
   height: 4px;
   background: #99E2D0;
   margin-bottom: 20px;
-  margin-left: 1%;
 }
 @media (min-width: 768px) {
   .section {
-    flex-direction: column;
-    align-items: center;
     margin-left: 100px;
     width: 80%;
   }
