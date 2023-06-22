@@ -12,7 +12,7 @@
         font-size: 35px;
     }
 
-    @media($breakpoint-desktop) {
+    @media(min-width:$breakpoint-desktop) {
         font-size: 40px;
     }
 

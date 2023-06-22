@@ -338,7 +338,7 @@ footer a {
     font-size: 35px;
   }
 }
-@media (1024px) {
+@media (min-width: 1024px) {
   .reservation {
     font-size: 40px;
   }
