@@ -135,6 +135,7 @@ img {
                         white-space: nowrap;
                         overflow: hidden;
                         text-overflow: ellipsis;
+                        text-align: left;
 
                         @media (min-width:$breakpoint-tablette) {
                             display: flex;
@@ -154,7 +155,7 @@ img {
 
 
                     position: absolute;
-                   right: -10%;
+                    right: -10%;
 
                     @media (min-width:$breakpoint-tablette) {
                         margin-right: 0;
@@ -205,8 +206,9 @@ img {
 
 
                         }
+
                         @media (min-width:$breakpoint-desktop) {
-                            width:100%;
+                            width: 100%;
                         }
                     }
 
@@ -228,7 +230,7 @@ img {
                     .valeur {
                         display: flex;
                         margin-top: -15px;
-                        right:-37px;
+                        right: -37px;
                         position: absolute;
                         justify-content: space-between;
                         animation: checked 0.8s cubic-bezier(0, 0, 0.51, 0.55);
@@ -237,6 +239,7 @@ img {
                             margin-right: 0;
                             animation: checked 0.8s ease-out;
                         }
+
                         @media (min-width: $breakpoint-desktop ) {
                             margin-right: -7%;
                         }
@@ -306,7 +309,7 @@ img {
 
     }
 
-   
+
     /*ANIMATION             MAGIC*/
     @keyframes magic {
         0% {

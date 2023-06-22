@@ -349,8 +349,6 @@ footer a {
 }
 
 p {
-  display: flex;
-  flex-wrap: wrap;
   text-align: center;
   margin: 10px auto;
   width: 80%;
@@ -762,6 +760,7 @@ img {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-align: left;
 }
 @media (min-width: 768px) {
   .section .cards .card .card-body .body-text p {
