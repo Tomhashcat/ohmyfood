@@ -537,6 +537,7 @@ p {
   position: absolute;
   align-items: center;
   margin-top: 15px;
+  color: #008766;
 }
 .restaurant .restaurant-cards {
   display: flex;
