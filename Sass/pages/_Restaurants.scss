@@ -34,13 +34,13 @@ img {
 
     .green-title {
 
-margin-left: 10px;
+        margin-left: 10px;
 
 
 
         .titre-EPD {
             font-weight: 300;
-           
+
             margin-bottom: 5px;
 
         }
@@ -51,7 +51,7 @@ margin-left: 10px;
             height: 4px;
             background: $color-frth;
             margin-bottom: 20px;
-           
+
 
         }
     }
@@ -61,7 +61,7 @@ margin-left: 10px;
     @media (min-width:$breakpoint-tablette) {
 
 
-       
+
         margin-left: 100px;
         width: 80%;
     }
@@ -155,7 +155,7 @@ margin-left: 10px;
 
                     position: absolute;
                     right: -10%;
-
+                   
                     @media (min-width:$breakpoint-tablette) {
                         margin-right: 0;
                     }
@@ -170,7 +170,7 @@ margin-left: 10px;
                     }
 
                     .ball {
-
+                       
                         display: none;
                         white-space: nowrap;
                         width: 70px;
@@ -232,12 +232,12 @@ margin-left: 10px;
                         right: -37px;
                         position: absolute;
                         justify-content: space-between;
-                        animation: checked  0.8s linear;
-                        
-                      
+                     
+                     animation: checked 1s ease-in-out;
+
                         @media (min-width:$breakpoint-tablette) {
                             margin-right: 0;
-                            animation: checked 0.8s ease-out;
+                           
                         }
 
                         @media (min-width: $breakpoint-desktop ) {
@@ -297,38 +297,38 @@ margin-left: 10px;
     @keyframes checked {
 
         0% {
-
-            right: -20%;
-        }
-
-        
-
-        100% {
-            right: -12%;
-        }
-
-
-    }
-
-
-    /*ANIMATION             MAGIC*/
-    @keyframes magic {
-        0% {
-
-            transform: scale(0);
-
-        }
-
-        50% {
-
-            transform: scale(1);
+            transform: translatex(19%);
+         
+         
         }
 
         100% {
-
-            transform: scale(0);
-            display: block;
+            transform: translatex(10%);
+            
+            
         }
     }
 
 }
+
+
+/*ANIMATION             MAGIC*/
+@keyframes magic {
+    0% {
+
+        transform: scale(0);
+
+    }
+
+    50% {
+
+        transform: scale(1);
+    }
+
+    100% {
+
+        transform: scale(0);
+        display: block;
+    }
+}
+

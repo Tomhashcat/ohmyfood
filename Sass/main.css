@@ -670,7 +670,6 @@ img {
   padding-bottom: 70px;
   width: 100%;
   /*ANIMATION             CHECKED*/
-  /*ANIMATION             MAGIC*/
 }
 .section .green-title {
   margin-left: 10px;
@@ -842,12 +841,11 @@ img {
   right: -37px;
   position: absolute;
   justify-content: space-between;
-  animation: checked 0.8s linear;
+  animation: checked 1s ease-in-out;
 }
 @media (min-width: 768px) {
   .section .cards .card:hover .card-body .valeur {
     margin-right: 0;
-    animation: checked 0.8s ease-out;
   }
 }
 @media (min-width: 1024px) {
@@ -906,12 +904,14 @@ img {
 }
 @keyframes checked {
   0% {
-    right: -20%;
+    transform: translatex(19%);
   }
   100% {
-    right: -12%;
+    transform: translatex(10%);
   }
 }
+
+/*ANIMATION             MAGIC*/
 @keyframes magic {
   0% {
     transform: scale(0);
