@@ -33,7 +33,7 @@ body {
 .heart-animation:hover .fa-solid {
   display: inline;
   padding: 1px;
-  animation: grow 0.3s;
+  animation: grow 1s;
   margin-top: 13px;
   margin-right: 1px;
 }
@@ -842,7 +842,7 @@ img {
   right: -37px;
   position: absolute;
   justify-content: space-between;
-  animation: checked 0.8s cubic-bezier(0, 0, 0.51, 0.55);
+  animation: checked 0.8s linear;
 }
 @media (min-width: 768px) {
   .section .cards .card:hover .card-body .valeur {
