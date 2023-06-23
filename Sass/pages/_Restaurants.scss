@@ -155,7 +155,8 @@ img {
 
                     position: absolute;
                     right: -10%;
-                   
+                   transition: all 1s;
+                   transition-duration: 2s;
                     @media (min-width:$breakpoint-tablette) {
                         margin-right: 0;
                     }
@@ -232,7 +233,7 @@ img {
                         right: -37px;
                         position: absolute;
                         justify-content: space-between;
-                     
+                        
                      animation: checked 1s ease-in-out;
 
                         @media (min-width:$breakpoint-tablette) {
@@ -248,7 +249,7 @@ img {
 
                             display: block;
                             z-index: 1;
-
+                            transition: all 1s;
                         }
 
                         .prix {
@@ -297,13 +298,13 @@ img {
     @keyframes checked {
 
         0% {
-            transform: translatex(19%);
+            transform: translatex(105%);
          
          
         }
 
         100% {
-            transform: translatex(10%);
+            transform: translatex(0%);
             
             
         }

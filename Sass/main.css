@@ -775,6 +775,8 @@ img {
 .section .cards .card .card-body .valeur {
   position: absolute;
   right: -10%;
+  transition: all 1s;
+  transition-duration: 2s;
 }
 @media (min-width: 768px) {
   .section .cards .card .card-body .valeur {
@@ -856,6 +858,7 @@ img {
 .section .cards .card:hover .card-body .valeur .ball {
   display: block;
   z-index: 1;
+  transition: all 1s;
 }
 .section .cards .card:hover .card-body .valeur .prix {
   height: 69px;
@@ -904,10 +907,10 @@ img {
 }
 @keyframes checked {
   0% {
-    transform: translatex(19%);
+    transform: translatex(105%);
   }
   100% {
-    transform: translatex(10%);
+    transform: translatex(0%);
   }
 }
 
