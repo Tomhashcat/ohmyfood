@@ -669,7 +669,6 @@ img {
   border-radius: 25px;
   padding-bottom: 70px;
   width: 100%;
-  /*ANIMATION             CHECKED*/
 }
 .section .green-title {
   margin-left: 10px;
@@ -904,14 +903,6 @@ img {
   color: White;
   background: linear-gradient(193.33deg, #a577dc -11.44%, #f4aadf 123.93%);
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-}
-@keyframes checked {
-  0% {
-    transform: translatex(105%);
-  }
-  100% {
-    transform: translatex(0%);
-  }
 }
 
 /*ANIMATION             MAGIC*/
