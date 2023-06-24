@@ -773,10 +773,12 @@ img {
   }
 }
 .section .cards .card .card-body .valeur {
+  display: flex;
+  flex-wrap: wrap;
   position: absolute;
-  right: -10%;
-  transition: all 1s;
-  transition-duration: 2s;
+  right: -37%;
+  transition-duration: 1s;
+  margin-top: -5%;
 }
 @media (min-width: 768px) {
   .section .cards .card .card-body .valeur {
@@ -786,13 +788,13 @@ img {
 .section .cards .card .card-body .valeur .prix {
   display: flex;
   text-align: center;
-  margin-top: 33px;
+  margin-top: 50px;
   background-color: #F6F6F6;
   border-radius: 0px 0px 25px;
   margin-right: 15px;
 }
 .section .cards .card .card-body .valeur .ball {
-  display: none;
+  display: block;
   white-space: nowrap;
   width: 70px;
   height: 80px;
@@ -801,6 +803,20 @@ img {
   margin-bottom: -15px;
   border-radius: 0px 25px 25px 0px;
   z-index: -1;
+}
+.section .cards .card .card-body .valeur .ball .fa-check {
+  display: flex;
+  color: white;
+  margin-top: 25px;
+  margin-left: 20px;
+  width: 30px;
+  height: 30px;
+  border-radius: 25px;
+  background-color: #F6F6F6;
+  color: #99E2D0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 @media (min-width: 1024px) {
   .section .cards .card .card-body .valeur .ball {
@@ -823,27 +839,12 @@ img {
     width: 100%;
   }
 }
-.section .cards .card:hover .card-body .fa-check {
-  display: flex;
-  color: white;
-  margin-top: 25px;
-  margin-left: 20px;
-  width: 30px;
-  height: 30px;
-  border-radius: 25px;
-  background-color: #F6F6F6;
-  color: #99E2D0;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
 .section .cards .card:hover .card-body .valeur {
   display: flex;
   margin-top: -15px;
-  right: -37px;
+  right: -12%;
   position: absolute;
   justify-content: space-between;
-  animation: checked 1s ease-in-out;
 }
 @media (min-width: 768px) {
   .section .cards .card:hover .card-body .valeur {
@@ -858,7 +859,6 @@ img {
 .section .cards .card:hover .card-body .valeur .ball {
   display: block;
   z-index: 1;
-  transition: all 1s;
 }
 .section .cards .card:hover .card-body .valeur .prix {
   height: 69px;
